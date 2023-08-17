@@ -1,0 +1,39 @@
+body {
+  /* margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  */
+ 
+}
+
+@font-face {
+  font-family: "FiraSans-Light";
+  src: url("./Assests/fonts/FiraSans-Light.ttf");
+}
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url("./Assests/fonts/FiraSans-Regular.ttf");
+}
+@font-face {
+  font-family: "FiraSans-SemiBold";
+  src: url("./Assests/fonts/FiraSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "FiraSans-Bold";
+  src: url("./Assests/fonts/FiraSans-Bold.ttf");
+}
+.FiraSansLight {
+  font-family: FiraSans-Light !important;
+}
+.FiraSansRegular {
+  font-family: FiraSans-Regular !important;
+}
+.FiraSansSemiBold {
+  font-family: FiraSans-SemiBold !important;
+}
+.FiraSansBold{
+   font-family: FiraSans-Bold !important;
+}
