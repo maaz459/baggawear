@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import TopBar from "../components/shared/navbar";
 import SecondaryNavbar from "../components/shared/secondaryNavbar";
 import PosterCarousel from "../components/shared/posterCarousel";
