@@ -9,6 +9,7 @@ import Footer from "../components/shared/footer";
 import SmallFooter from "../components/shared/smallFotter";
 class Home extends Component {
   state = {};
+
   render() {
     return (
       <div>

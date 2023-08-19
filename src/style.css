@@ -44,7 +44,7 @@
 }
 
 .underlineAnimation::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -217,7 +217,7 @@
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0px;
   width: 30px;
@@ -255,7 +255,7 @@
 }
 
 .nav-item::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -309,7 +309,7 @@
   border-radius: 5px;
 }
 .search-icon::before {
-  content: "|";
+  content: '|';
   font-family: FiraSans-regular;
   color: lightgray;
   padding-right: 5px;
@@ -438,7 +438,7 @@
 }
 .hr:before {
   display: block;
-  content: "";
+  content: '';
   height: 30px;
   margin-top: -31px;
   border-style: solid;
@@ -446,10 +446,10 @@
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
-.whatsappNumber{
+.whatsappNumber {
   position: relative;
   bottom: 3px;
- }
+}
 /* <------------> */
 /* <-----Poster Carousel-------> */
 .carouselImage {
@@ -491,7 +491,7 @@
   border-radius: 10px;
   margin-top: 20px;
 }
-.categoryImage{
+.categoryImage {
   width: 40px;
   margin: auto;
 }
@@ -521,8 +521,11 @@
 }
 .productCard:hover {
   background: #fff;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.08),
+    0 0 6px rgba(0, 0, 0, 0.05);
+  transition:
+    0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
@@ -568,22 +571,22 @@
 .secondaryFooterImg {
   width: 80px;
 }
-.secondaryFooter{
-  background-color:#D4EEE2
+.secondaryFooter {
+  background-color: #d4eee2;
 }
 .secondaryFooterText {
-  margin: "auto 0px";
+  margin: 'auto 0px';
 }
 
 .smallFooter {
   padding: 50px 0px;
 }
 .accordion-button::after {
-  background-image: url("./Assests/imgs/AccordianPlus.png");
+  background-image: url('./Assests/imgs/AccordianPlus.png');
   transform: scale(0.7) !important;
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url("./Assests/imgs/accordianMinus.png");
+  background-image: url('./Assests/imgs/accordianMinus.png');
 }
 .accordion-button:focus {
   box-shadow: none;

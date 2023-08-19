@@ -1,35 +1,34 @@
-import { Component } from "react";
+import { Component } from 'react';
+
 class ToggleButton extends Component {
-checking = ()=>{
+  checking = () => {
+    const menuBtn = document.querySelector('.menu-btn');
 
-  const menuBtn = document.querySelector('.menu-btn');
+    if (!this.state.menuOpen) {
+      menuBtn.classList.add('open');
+      this.setState({ menuOpen: true });
+    } else {
+      menuBtn.classList.remove('open');
+      this.setState({ menuOpen: false });
+    }
+  };
 
-  if(!this.state.menuOpen) {
-    menuBtn.classList.add('open');
- this.setState({menuOpen:true})
-  } else {
-    menuBtn.classList.remove('open');
-    this.setState({menuOpen:false})
+  state = {
+    menuOpen: false,
+  };
+
+  render() {
+    return (
+      <div
+        className="menu-btn"
+        onClick={() => {
+          this.checking();
+        }}
+      >
+        <div className="menu-btn__burger" />
+      </div>
+    );
   }
 }
-  
-    state = { 
-      menuOpen:false
-     } 
-    render() { 
-        return (
 
-<div className="menu-btn" onClick={()=>{
-  this.checking()
-}}>
-<div className="menu-btn__burger">
-
-</div>
-</div>
-
-            
-        );
-    }
-}
- 
 export default ToggleButton;

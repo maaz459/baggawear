@@ -6,24 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   */
- 
 }
 
 @font-face {
-  font-family: "FiraSans-Light";
-  src: url("./Assests/fonts/FiraSans-Light.ttf");
+  font-family: 'FiraSans-Light';
+  src: url('./Assests/fonts/FiraSans-Light.ttf');
 }
 @font-face {
-  font-family: "FiraSans-Regular";
-  src: url("./Assests/fonts/FiraSans-Regular.ttf");
+  font-family: 'FiraSans-Regular';
+  src: url('./Assests/fonts/FiraSans-Regular.ttf');
 }
 @font-face {
-  font-family: "FiraSans-SemiBold";
-  src: url("./Assests/fonts/FiraSans-SemiBold.ttf");
+  font-family: 'FiraSans-SemiBold';
+  src: url('./Assests/fonts/FiraSans-SemiBold.ttf');
 }
 @font-face {
-  font-family: "FiraSans-Bold";
-  src: url("./Assests/fonts/FiraSans-Bold.ttf");
+  font-family: 'FiraSans-Bold';
+  src: url('./Assests/fonts/FiraSans-Bold.ttf');
 }
 .FiraSansLight {
   font-family: FiraSans-Light !important;
@@ -34,6 +33,6 @@ body {
 .FiraSansSemiBold {
   font-family: FiraSans-SemiBold !important;
 }
-.FiraSansBold{
-   font-family: FiraSans-Bold !important;
+.FiraSansBold {
+  font-family: FiraSans-Bold !important;
 }
