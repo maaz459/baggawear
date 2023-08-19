@@ -2,19 +2,39 @@ import React, { Component } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { BiCategory } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import Instagram from '../../Assests/imgs/instagram.png';
+import Facebook from '../../Assests/imgs/icons8-facebook-48.png';
+import Youtube from '../../Assests/imgs/youtube.png';
+import Whatsapp from '../../Assests/imgs/whatsapp.png';
+import ChevronUp from '../../Assests/imgs/chevron-up1.png';
+import ChevronDown from '../../Assests/imgs/chevron-down1.png';
+import Home from '../../Assests/imgs/home.png';
+import Blogs from '../../Assests/imgs/brand-booking.png';
+import AboutUS from '../../Assests/imgs/user.png';
+import Contact from '../../Assests/imgs/phone-call.png';
+import Team from '../../Assests/imgs/group.png';
+import Shop from '../../Assests/imgs/shopping-bag.png';
 
 class SecondaryNavbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      caretButtonAnimation: false,
+    };
+  }
+
   caretAnimation = () => {
-    if (this.state.caretButtonAnimation === true) {
+    const { caretButtonAnimation } = this.state;
+    if (caretButtonAnimation === true) {
       this.setState({ caretButtonAnimation: false });
     } else {
       this.setState({ caretButtonAnimation: true });
     }
   };
 
-  state = { caretButtonAnimation: false };
-
   render() {
+    const { caretButtonAnimation } = this.state;
+
     return (
       <div className="d-none d-md-block">
         <div className="container-fluid">
@@ -36,16 +56,16 @@ class SecondaryNavbar extends Component {
                 >
                   <BiCategory className="mb-1 f18 mx-1" />
                   <span>Browse All Categories</span>
-                  {this.state.caretButtonAnimation ? (
+                  {caretButtonAnimation ? (
                     <img
                       className="mx-1 dropdownCaretUp f18"
-                      src={require('../../Assests/imgs/chevron-up1.png')}
+                      src={ChevronUp}
                       alt="chevronUpIcon"
                     />
                   ) : (
                     <img
                       className="mx-1 dropdownCaretDown f18"
-                      src={require('../../Assests/imgs/chevron-down1.png')}
+                      src={ChevronDown}
                       alt="chevronDownIcon"
                     />
                   )}
@@ -68,66 +88,41 @@ class SecondaryNavbar extends Component {
                   className="mx-1 f16 textDecorationNone underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-2 mx-1"
-                    src={require('../../Assests/imgs/home.png')}
-                    alt="homeIcon"
-                  />{' '}
-                  Home
+                  <img className="mb-2 mx-1" src={Home} alt="homeIcon" /> Home
                 </Link>
                 <Link
                   className="mx-1 f16 d-lg-inline d-none textDecorationNone underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-1 mx-1"
-                    src={require('../../Assests/imgs/brand-booking.png')}
-                    alt="blogIcon"
-                  />
+                  <img className="mb-1 mx-1" src={Blogs} alt="blogIcon" />
                   Blogs
                 </Link>
                 <Link
                   className="mx-1 f16 textDecorationNone underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-2 mx-1"
-                    src={require('../../Assests/imgs/user.png')}
-                    alt="userIcon"
-                  />
+                  <img className="mb-2 mx-1" src={AboutUS} alt="userIcon" />
                   About us
                 </Link>
                 <Link
                   className="mx-1 f16 textDecorationNone underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-2 mx-1"
-                    src={require('../../Assests/imgs/phone-call.png')}
-                    alt="contactIcon"
-                  />
+                  <img className="mb-2 mx-1" src={Contact} alt="contactIcon" />
                   Contact us
                 </Link>
                 <Link
                   className="mx-1 d-lg-inline d-none mx-2 f16 textDecorationNone underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-2 mx-1"
-                    src={require('../../Assests/imgs/group.png')}
-                    alt="contactIcon"
-                  />
+                  <img className="mb-2 mx-1" src={Team} alt="contactIcon" />
                   Our Team
                 </Link>
                 <Link
                   className="mx-2  f16 textDecorationNone d-lg-inline d-none underlineAnimation"
                   to="/"
                 >
-                  <img
-                    className="mb-2 mx-1"
-                    src={require('../../Assests/imgs/shopping-bag.png')}
-                    alt="contactIcon"
-                  />
+                  <img className="mb-2 mx-1" src={Shop} alt="contactIcon" />
                   Shop
                 </Link>
               </div>
@@ -139,7 +134,7 @@ class SecondaryNavbar extends Component {
               >
                 <img
                   className="mb-2 w-28px"
-                  src={require('../../Assests/imgs/icons8-facebook-48.png')}
+                  src={Facebook}
                   alt="facebookIcon"
                 />
               </Link>
@@ -149,7 +144,7 @@ class SecondaryNavbar extends Component {
               >
                 <img
                   className="mb-2 mx-1 w-23px"
-                  src={require('../../Assests/imgs/instagram.png')}
+                  src={Instagram}
                   alt="instagramIcon"
                 />
               </Link>
@@ -157,17 +152,13 @@ class SecondaryNavbar extends Component {
                 className="mx-1 f18 textDecorationNone"
                 to="https://www.youtube.com"
               >
-                <img
-                  className="mb-2 w-23px"
-                  src={require('../../Assests/imgs/youtube.png')}
-                  alt="youtubeIcon"
-                />
+                <img className="mb-2 w-23px" src={Youtube} alt="youtubeIcon" />
               </Link>
               <span className="mx-1 f25 whatsappNumber">|</span>
               <Link className="mx-1 f18 textDecorationNone" to="/">
                 <img
                   className="mb-2 w-23px"
-                  src={require('../../Assests/imgs/whatsapp.png')}
+                  src={Whatsapp}
                   alt="whatsappIcon"
                 />
 

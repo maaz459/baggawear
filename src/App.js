@@ -1,8 +1,11 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Router from './router/index';
 
 class App extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     return <Router />;

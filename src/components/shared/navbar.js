@@ -5,32 +5,40 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import ToggleButton from './toggleButton';
 import OffCanvas from './offcanvas';
+import Logo from '../../Assests/imgs/Bagga Wear.png';
+import Team from '../../Assests/imgs/group.png';
+import Search from '../../Assests/imgs/search.png';
+import Wishlist from '../../Assests/imgs/heart.png';
+import Cart from '../../Assests/imgs/shopping-cart.png';
 
 class TopBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      show: false,
+    };
+  }
+
   handleShow = () => {
-    if (this.state.show === true) {
+    const { show } = this.state;
+    if (show === true) {
       this.setState({ show: false });
     } else {
       this.setState({ show: true });
     }
   };
 
-  state = {
-    show: false,
-  };
-
   render() {
+    const states = this.state;
     return (
-      <>
-        <OffCanvas show={this.state.show} />
+      <div>
+        <OffCanvas open={states.show} />
+
         <Navbar expand="md" className="bg-body-tertiary pt-3">
           <Container fluid className="mx-3 justify-content-space-between">
             <Navbar.Brand href="/">
               {' '}
-              <img
-                className="displayInline w-28px"
-                src={require('../../Assests/imgs/Bagga Wear.png')}
-              />
+              <img alt="Logo" className="displayInline w-28px" src={Logo} />
               <span className="color FiraSansRegular  displayInline">
                 BaggaWear
               </span>
@@ -53,43 +61,28 @@ class TopBar extends Component {
                   name=""
                 />
                 <a href="/" className="search-icon">
-                  <img
-                    src={require('../../Assests/imgs/search.png')}
-                    alt="SearchIcon"
-                  />
+                  <img src={Search} alt="SearchIcon" />
                 </a>
               </div>
             </div>
             <Nav className="ms-auto d-none d-md-block">
               <Link className="nav-item FiraSansRegular" to="/">
-                <img
-                  className="mb-1 me-1"
-                  src={require('../../Assests/imgs/heart.png')}
-                  alt="heartIcon"
-                />
+                <img className="mb-1 me-1" src={Wishlist} alt="heartIcon" />
                 Wishlist
               </Link>
               <Link className="nav-item FiraSansRegular mx-3" to="/cart">
-                <img
-                  className="mb-1 me-1"
-                  src={require('../../Assests/imgs/shopping-cart.png')}
-                  alt="shoppingCartIcon"
-                />
+                <img className="mb-1 me-1" src={Cart} alt="shoppingCartIcon" />
                 Cart
               </Link>
               <Link className="nav-item FiraSansRegular" to="/">
-                <img
-                  className="mb-1 me-1"
-                  src={require('../../Assests/imgs/user.png')}
-                  alt="userIcon"
-                />
+                <img className="mb-1 me-1" src={Team} alt="userIcon" />
                 Account
               </Link>
             </Nav>
           </Container>
         </Navbar>
         <hr className="mx-3 text-muted" />
-      </>
+      </div>
     );
   }
 }

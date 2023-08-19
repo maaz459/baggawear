@@ -1,11 +1,14 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import TopBar from '../components/shared/navbar';
 import SecondaryNavbar from '../components/shared/secondaryNavbar';
 import Footer from '../components/shared/footer';
 import SmallFooter from '../components/shared/smallFotter';
 
 class cart extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     return (
