@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import ToggleButton from "./toggleButton";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
-import OffCanvas from "./offcanvas";
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+import ToggleButton from './toggleButton';
+import OffCanvas from './offcanvas';
+
 class TopBar extends Component {
   handleShow = () => {
     if (this.state.show === true) {
@@ -20,13 +21,20 @@ class TopBar extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <OffCanvas show={this.state.show} />
         <Navbar expand="md" className="bg-body-tertiary pt-3">
           <Container fluid className="mx-3 justify-content-space-between">
-            <Navbar.Brand href="/"> <img className="displayInline w-28px" src={require("../../Assests/imgs/Bagga Wear.png")}  /> 
-             <span className="color FiraSansRegular  displayInline">BaggaWear</span>
-             </Navbar.Brand>
+            <Navbar.Brand href="/">
+              {' '}
+              <img
+                className="displayInline w-28px"
+                src={require('../../Assests/imgs/Bagga Wear.png')}
+              />
+              <span className="color FiraSansRegular  displayInline">
+                BaggaWear
+              </span>
+            </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
               className="navbarToggler"
@@ -46,7 +54,7 @@ class TopBar extends Component {
                 />
                 <a href="/" className="search-icon">
                   <img
-                    src={require("../../Assests/imgs/search.png")}
+                    src={require('../../Assests/imgs/search.png')}
                     alt="SearchIcon"
                   />
                 </a>
@@ -56,7 +64,7 @@ class TopBar extends Component {
               <Link className="nav-item FiraSansRegular" to="/">
                 <img
                   className="mb-1 me-1"
-                  src={require("../../Assests/imgs/heart.png")}
+                  src={require('../../Assests/imgs/heart.png')}
                   alt="heartIcon"
                 />
                 Wishlist
@@ -64,7 +72,7 @@ class TopBar extends Component {
               <Link className="nav-item FiraSansRegular mx-3" to="/cart">
                 <img
                   className="mb-1 me-1"
-                  src={require("../../Assests/imgs/shopping-cart.png")}
+                  src={require('../../Assests/imgs/shopping-cart.png')}
                   alt="shoppingCartIcon"
                 />
                 Cart
@@ -72,7 +80,7 @@ class TopBar extends Component {
               <Link className="nav-item FiraSansRegular" to="/">
                 <img
                   className="mb-1 me-1"
-                  src={require("../../Assests/imgs/user.png")}
+                  src={require('../../Assests/imgs/user.png')}
                   alt="userIcon"
                 />
                 Account
@@ -81,7 +89,7 @@ class TopBar extends Component {
           </Container>
         </Navbar>
         <hr className="mx-3 text-muted" />
-      </React.Fragment>
+      </>
     );
   }
 }

@@ -1,10 +1,12 @@
-import { Component } from "react";
-import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+
 class Footer extends Component {
   state = {};
+
   render() {
     return (
       <div className="bg-dark text-light d-none d-lg-block">
@@ -12,9 +14,13 @@ class Footer extends Component {
           <div className="row justify-content-center">
             <div className="col-3">
               <h5 className="FireSansSemiBold">ABOUT BAGGAWEAR</h5>
-              <Link className="textDecorationNone FiraSansLight text-light f13 underlineAnimation">CAREERS</Link>
+              <Link className="textDecorationNone FiraSansLight text-light f13 underlineAnimation">
+                CAREERS
+              </Link>
               <br />
-              <Link className="textDecorationNone FiraSansLight text-light f13 underlineAnimation">ABOUT US</Link>
+              <Link className="textDecorationNone FiraSansLight text-light f13 underlineAnimation">
+                ABOUT US
+              </Link>
               <br />
               <Link className="textDecorationNone FiraSansLight text-light f13 underlineAnimation">
                 STORE ADDRESS
@@ -38,7 +44,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 CONTACT US
               </Link>
               <br />
@@ -46,7 +51,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 PAYMENT GUIDE
               </Link>
               <br />
@@ -54,7 +58,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 PRIVACY POLICY
               </Link>
               <br />
@@ -62,7 +65,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 TRACK MY ORDER
               </Link>
               <br />
@@ -70,7 +72,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 TERMS & CONDITION
               </Link>
               <br />
@@ -78,7 +79,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 RETURN & ENCHANGE
               </Link>
             </div>
@@ -88,7 +88,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/"
               >
-                
                 LOGIN
               </Link>
               <br />
@@ -103,7 +102,6 @@ class Footer extends Component {
                 className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
                 to="/cart"
               >
-                
                 VIEW CART
               </Link>
               <br />
@@ -121,30 +119,32 @@ class Footer extends Component {
                 <Link className="displayInline">
                   <img
                     className="w-27px"
-                    src={require("../../Assests/imgs/whatsapp.png")}
+                    src={require('../../Assests/imgs/whatsapp.png')}
                   />
                 </Link>
                 <Link className="displayInline">
                   <img
                     className="w-27px ms-2"
-                    src={require("../../Assests/imgs/instagram.png")}
+                    src={require('../../Assests/imgs/instagram.png')}
                   />
                 </Link>
                 <Link className="displayInline">
                   <img
                     className="w-30px ms-2"
-                    src={require("../../Assests/imgs/icons8-facebook-48.png")}
+                    src={require('../../Assests/imgs/icons8-facebook-48.png')}
                   />
                 </Link>
                 <Link className="displayInline">
                   <img
                     className="w-30px ms-2"
-                    src={require("../../Assests/imgs/youtube.png")}
+                    src={require('../../Assests/imgs/youtube.png')}
                   />
                 </Link>
               </div>
               <div>
-                <h5 className="mt-3 FiraSansSemiBold">SIGN UP FOR BAGGAWEAR LATEST UPDATES :</h5>
+                <h5 className="mt-3 FiraSansSemiBold">
+                  SIGN UP FOR BAGGAWEAR LATEST UPDATES :
+                </h5>
                 <InputGroup className="mt-3 bg-light rounded-pill">
                   <Form.Control
                     placeholder="ENTER EMAIL"

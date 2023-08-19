@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import TopBar from "../components/shared/navbar";
 import SecondaryNavbar from "../components/shared/secondaryNavbar";
 import PosterCarousel from "../components/shared/posterCarousel";
@@ -9,6 +9,7 @@ import Footer from "../components/shared/footer";
 import SmallFooter from "../components/shared/smallFotter";
 class Home extends Component {
   state = {};
+
   render() {
     return (
       <div>
