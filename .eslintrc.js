@@ -1,5 +1,12 @@
 module.exports = {
   parser: '@babel/eslint-parser',
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+
+    // ... any other environments you need
+  },
   parserOptions: {
     requireConfigFile: false,
     babelOptions: {
@@ -16,6 +23,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error', // Ensures that your code is formatted with prettier
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/prefer-stateless-function': 'off',
   },
   settings: {
     react: {

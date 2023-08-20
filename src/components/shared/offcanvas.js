@@ -1,25 +1,39 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import { BiCategory } from 'react-icons/bi';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Home from '../../Assests/imgs/home.png';
+import Team from '../../Assests/imgs/group.png';
+import Search from '../../Assests/imgs/search.png';
+import Wishlist from '../../Assests/imgs/heart.png';
+import Cart from '../../Assests/imgs/shopping-cart.png';
+import ChevronUp from '../../Assests/imgs/chevron-up.png';
+import ChevronDown from '../../Assests/imgs/chevron-down.png';
 
 class OffCanvas extends Component {
+  constructor() {
+    super();
+    this.state = {
+      caretButtonAnimation: false,
+    };
+  }
+
   caretAnimation = () => {
-    if (this.state.caretButtonAnimation === true) {
+    const { caretButtonAnimation } = this.state;
+    if (caretButtonAnimation === true) {
       this.setState({ caretButtonAnimation: false });
     } else {
       this.setState({ caretButtonAnimation: true });
     }
   };
 
-  state = {
-    caretButtonAnimation: false,
-  };
-
   render() {
+    const open = this.props;
+    const { caretButtonAnimation } = this.state;
+
     return (
-      <Offcanvas className="d-md-none w-70 bg-light" show={this.props.show}>
+      <Offcanvas className="d-md-none w-70 bg-light" show={open}>
         <Offcanvas.Header>
           <Offcanvas.Title className="mx-auto display-2 color FiraSansBold">
             BaggaWear
@@ -35,10 +49,7 @@ class OffCanvas extends Component {
             name=""
           />
           <a href="/" className="search-icon">
-            <img
-              src={require('../../Assests/imgs/search.png')}
-              alt="searchIcon"
-            />
+            <img src={Search} alt="searchIcon" />
           </a>
         </div>
 
@@ -46,11 +57,7 @@ class OffCanvas extends Component {
           <div className="my-4">
             <Link className="text-decoration-none" to="/">
               <h3>
-                <img
-                  className="mx-2 mb-2 w-23px"
-                  src={require('../../Assests/imgs/home.png')}
-                  alt="homeIcon"
-                />
+                <img className="mx-2 mb-2 w-23px" src={Home} alt="homeIcon" />
                 <span className="text-muted underlineAnimation FiraSansRegular">
                   Home
                 </span>
@@ -62,7 +69,7 @@ class OffCanvas extends Component {
               <h3>
                 <img
                   className="mx-2 mb-2 w-23px"
-                  src={require('../../Assests/imgs/heart.png')}
+                  src={Wishlist}
                   alt="heartIcon"
                 />
                 <span className="text-muted underlineAnimation FiraSansRegular">
@@ -76,7 +83,7 @@ class OffCanvas extends Component {
               <h3>
                 <img
                   className="mx-2 mb-2 w-23px"
-                  src={require('../../Assests/imgs/shopping-cart.png')}
+                  src={Cart}
                   alt="shoppingCartIcon"
                 />
                 <span className="text-muted underlineAnimation FiraSansRegular">
@@ -88,11 +95,7 @@ class OffCanvas extends Component {
           <div className="my-4 ">
             <Link className="text-decoration-none bgcolor" to="/">
               <h3>
-                <img
-                  className="mx-2 mb-2 w-23px"
-                  src={require('../../Assests/imgs/user.png')}
-                  alt="userIcon"
-                />
+                <img className="mx-2 mb-2 w-23px" src={Team} alt="userIcon" />
                 <span className="text-muted underlineAnimation FiraSansRegular">
                   Account
                 </span>
@@ -116,16 +119,16 @@ class OffCanvas extends Component {
                 <h3>
                   <BiCategory className="me-3 mb-2 color f25" />
                   <span className="text-muted FiraSansRegular">Category</span>
-                  {this.state.caretButtonAnimation && this.props.show ? (
+                  {caretButtonAnimation && open ? (
                     <img
                       className="mx-2 dropdownCaretUp f20"
-                      src={require('../../Assests/imgs/chevron-up.png')}
+                      src={ChevronUp}
                       alt="chevronUpIcon"
                     />
                   ) : (
                     <img
                       className="mx-2 dropdownCaretDown f20"
-                      src={require('../../Assests/imgs/chevron-down.png')}
+                      src={ChevronDown}
                       alt="chevronDownIcon"
                     />
                   )}

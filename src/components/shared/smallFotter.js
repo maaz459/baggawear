@@ -1,12 +1,19 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Instagram from '../../Assests/imgs/instagram.png';
+import Facebook from '../../Assests/imgs/icons8-facebook-48.png';
+import Youtube from '../../Assests/imgs/youtube.png';
+import Whatsapp from '../../Assests/imgs/whatsapp.png';
 
 class SmallFooter extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     return (
@@ -164,33 +171,25 @@ class SmallFooter extends Component {
           <div className="row mt-3">
             <h5 className="text-light FiraSansSemiBold">FOLLOW US ON</h5>
             <div>
-              <Link className="displayInline">
-                <img
-                  className="w-27px"
-                  src={require('../../Assests/imgs/whatsapp.png')}
-                  alt="whatsappIcon"
-                />
+              <Link to="/" className="displayInline">
+                <img className="w-27px" src={Whatsapp} alt="whatsappIcon" />
               </Link>
-              <Link className="displayInline">
+              <Link to="/" className="displayInline">
                 <img
                   className="w-27px ms-2"
-                  src={require('../../Assests/imgs/instagram.png')}
+                  src={Instagram}
                   alt="instagramIcon"
                 />
               </Link>
-              <Link className="displayInline">
+              <Link to="/" className="displayInline">
                 <img
                   className="w-30px ms-2"
-                  src={require('../../Assests/imgs/icons8-facebook-48.png')}
+                  src={Facebook}
                   alt="facebookIcon"
                 />
               </Link>
-              <Link className="displayInline">
-                <img
-                  className="w-30px ms-2"
-                  src={require('../../Assests/imgs/youtube.png')}
-                  alt="youtubeIcon"
-                />
+              <Link to="/" className="displayInline">
+                <img className="w-30px ms-2" src={Youtube} alt="youtubeIcon" />
               </Link>
             </div>
           </div>

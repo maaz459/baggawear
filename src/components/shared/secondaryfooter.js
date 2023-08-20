@@ -1,8 +1,15 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Exchange from '../../Assests/imgs/exchangeGif.gif';
+import Dilivery from '../../Assests/imgs/diliverGif.gif';
+import Hours from '../../Assests/imgs/24 hours Gif.gif';
+import Location from '../../Assests/imgs/LocationGif.gif';
 
 class SecondaryFooter extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     return (
@@ -15,11 +22,11 @@ class SecondaryFooter extends Component {
               className="textDecorationNone d-flex  text-align-center"
             >
               <img
+                alt="diliveryGif"
                 className="mx-2 secondaryFooterImg"
-                src={require('../../Assests/imgs/diliverGif.gif')}
+                src={Dilivery}
               />
               <p>
-                {' '}
                 <span className="text-uppercase secondaruFooterText FiraSansBold">
                   Shipping Charges:
                 </span>{' '}
@@ -37,11 +44,11 @@ class SecondaryFooter extends Component {
               className="textDecorationNone d-flex  text-align-center"
             >
               <img
+                alt="24Hoursgif"
                 className="secondaryFooterImg mx-2"
-                src={require('../../Assests/imgs/24 hours Gif.gif')}
+                src={Hours}
               />
               <p>
-                {' '}
                 <span className="text-uppercase secondaruFooterText FiraSansBold">
                   Support 24/7 :
                 </span>{' '}
@@ -59,13 +66,12 @@ class SecondaryFooter extends Component {
               className="textDecorationNone d-flex text-align-center"
             >
               <img
+                alt="locationgif"
                 className="secondaryFooterImg mx-2"
-                src={require('../../Assests/imgs/LocationGif.gif')}
+                src={Location}
               />
               <p>
-                {' '}
                 <span className="text-uppercase secondaruFooterText FiraSansBold">
-                  {' '}
                   Track your order :
                 </span>{' '}
                 <br />
@@ -82,8 +88,9 @@ class SecondaryFooter extends Component {
               className="textDecorationNone d-flex  text-align-center"
             >
               <img
+                alt="exchangegif"
                 className="secondaryFooterImg mx-2"
-                src={require('../../Assests/imgs/exchangeGif.gif')}
+                src={Exchange}
               />
               <p>
                 <span className="text-uppercase secondaruFooterText FiraSansBold">

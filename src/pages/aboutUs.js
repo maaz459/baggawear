@@ -1,8 +1,11 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import TopBar from '../components/shared/navbar';
 
 class AboutUs extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     return (

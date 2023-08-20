@@ -1,14 +1,24 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
+import WishlistIcon from '../../Assests/imgs/cardWishlistIcon.png';
+import Cart from '../../Assests/imgs/shopping-cart.png';
+import CardImg1 from '../../Assests/imgs/57893.jpg';
+import CardImg2 from '../../Assests/imgs/t-shirt-1976334_1280.png';
+import CardImg3 from '../../Assests/imgs/130.jpg';
+import CardImg4 from '../../Assests/imgs/Isolated_white_t-shirt_front.jpg';
 
 class ProductsCards extends Component {
-  state = {
-    number: 10000,
-  };
+  constructor() {
+    super();
+    this.state = {
+      number: 10000,
+    };
+  }
 
   render() {
+    const { number } = this.state;
     return (
       <div className="container">
         <div className="row justify-content-center">
@@ -16,13 +26,10 @@ class ProductsCards extends Component {
             <Card className="productCard">
               <img
                 className="CardWishlistIcon"
-                src={require('../../Assests/imgs/cardWishlistIcon.png')}
+                src={WishlistIcon}
                 alt="WishlistIcon"
               />
-              <Card.Img
-                className="productCardImg"
-                src={require('../../Assests/imgs/57893.jpg')}
-              />
+              <Card.Img className="productCardImg" src={CardImg1} />
               <Card.Body className="p-3">
                 <small className="color2 FiraSansLight color">Category</small>
                 <p className="f16 productCardName FiraSansRegular">
@@ -46,7 +53,7 @@ class ProductsCards extends Component {
 
                   <div>
                     <p className="displayInline mt-2 f18 FiraSansSemiBold">
-                      PKR {this.state.number.toLocaleString('ur-PK')}
+                      PKR {number.toLocaleString('ur-PK')}
                     </p>
                   </div>
                 </div>
@@ -54,10 +61,7 @@ class ProductsCards extends Component {
                   variant="light"
                   className="displayInline addCartBtn mb-1"
                 >
-                  <img
-                    className="pb-1 me-2"
-                    src={require('../../Assests/imgs/shopping-cart.png')}
-                  />
+                  <img alt="shoppingCart" className="pb-1 me-2" src={Cart} />
                   <small className="color FiraSansSemiBold">Add</small>
                 </Button>
               </Card.Body>
@@ -67,14 +71,11 @@ class ProductsCards extends Component {
             <Card className="productCard">
               <img
                 className="CardWishlistIcon"
-                src={require('../../Assests/imgs/cardWishlistIcon.png')}
+                src={WishlistIcon}
                 alt="WishlistIcon"
               />
 
-              <Card.Img
-                className="productCardImg"
-                src={require('../../Assests/imgs/t-shirt-1976334_1280.png')}
-              />
+              <Card.Img className="productCardImg" src={CardImg2} />
               <Card.Body className="p-3">
                 <small className="color2 FiraSansLight color">Category</small>
                 <p className="f16 productCardName FiraSansRegular">
@@ -98,7 +99,7 @@ class ProductsCards extends Component {
 
                   <div>
                     <p className="displayInline mt-2 f18 FiraSansSemiBold">
-                      PKR {this.state.number.toLocaleString('ur-PK')}
+                      PKR {number.toLocaleString('ur-PK')}
                     </p>
                   </div>
                 </div>
@@ -106,10 +107,7 @@ class ProductsCards extends Component {
                   variant="light"
                   className="displayInline bgcolor addCartBtn mb-1"
                 >
-                  <img
-                    className="pb-1 me-2"
-                    src={require('../../Assests/imgs/shopping-cart.png')}
-                  />
+                  <img alt="shoppingCartImg" className="pb-1 me-2" src={Cart} />
                   <small className="color FiraSansSemiBold">Add</small>
                 </Button>
               </Card.Body>
@@ -119,14 +117,11 @@ class ProductsCards extends Component {
             <Card className="productCard">
               <img
                 className="CardWishlistIcon"
-                src={require('../../Assests/imgs/cardWishlistIcon.png')}
+                src={WishlistIcon}
                 alt="WishlistIcon"
               />
 
-              <Card.Img
-                className="productCardImg"
-                src={require('../../Assests/imgs/130.jpg')}
-              />
+              <Card.Img className="productCardImg" src={CardImg3} />
               <Card.Body className="p-3">
                 <small className="color2 FiraSansLight color">Category</small>
                 <p className="f16 productCardName FiraSansRegular">
@@ -150,7 +145,7 @@ class ProductsCards extends Component {
 
                   <div>
                     <p className="displayInline mt-2 f18 FiraSansSemiBold">
-                      PKR {this.state.number.toLocaleString('ur-PK')}
+                      PKR {number.toLocaleString('ur-PK')}
                     </p>
                   </div>
                 </div>
@@ -158,10 +153,7 @@ class ProductsCards extends Component {
                   variant="light"
                   className="displayInline addCartBtn mb-1"
                 >
-                  <img
-                    className="pb-1 me-2"
-                    src={require('../../Assests/imgs/shopping-cart.png')}
-                  />
+                  <img alt="shoppingCartImg" className="pb-1 me-2" src={Cart} />
                   <small className="color FiraSansSemiBold">Add</small>
                 </Button>
               </Card.Body>
@@ -171,14 +163,11 @@ class ProductsCards extends Component {
             <Card className="productCard">
               <img
                 className="CardWishlistIcon"
-                src={require('../../Assests/imgs/cardWishlistIcon.png')}
+                src={WishlistIcon}
                 alt="WishlistIcon"
               />
 
-              <Card.Img
-                className="productCardImg"
-                src={require('../../Assests/imgs/Isolated_white_t-shirt_front.jpg')}
-              />
+              <Card.Img className="productCardImg" src={CardImg4} />
               <Card.Body className="p-3">
                 <small className="color2 FiraSansLight color">Category</small>
                 <p className="f16 productCardName FiraSansRegular">
@@ -202,7 +191,7 @@ class ProductsCards extends Component {
 
                   <div>
                     <p className="displayInline mt-2 f18 FiraSansSemiBold">
-                      PKR {this.state.number.toLocaleString('ur-PK')}
+                      PKR {number.toLocaleString('ur-PK')}
                     </p>
                   </div>
                 </div>
@@ -210,10 +199,7 @@ class ProductsCards extends Component {
                   variant="light"
                   className="displayInline addCartBtn mb-1"
                 >
-                  <img
-                    className="pb-1 me-2"
-                    src={require('../../Assests/imgs/shopping-cart.png')}
-                  />
+                  <img alt="shoppingCartImg" className="pb-1 me-2" src={Cart} />
                   <small className="color FiraSansSemiBold">Add</small>
                 </Button>
               </Card.Body>

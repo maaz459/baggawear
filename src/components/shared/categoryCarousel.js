@@ -1,10 +1,15 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Card from 'react-bootstrap/Card';
-import { BsArrowRight, BsArrowLeft, BsArrowRightCircle } from 'react-icons/bs';
+import Tshirt from '../../Assests/imgs/tshirt.png';
+import ArrowRight from '../../Assests/imgs/arrow-circle-right.png';
+import ArrowLeft from '../../Assests/imgs/arrow-circle-left.png';
 
 class CategoryCarousel extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   render() {
     const settings = {
@@ -13,12 +18,8 @@ class CategoryCarousel extends Component {
       speed: 500,
       slidesToShow: 12,
       slidesToScroll: 10,
-      nextArrow: (
-        <img src={require('../../Assests/imgs/arrow-circle-right.png')} />
-      ),
-      prevArrow: (
-        <img src={require('../../Assests/imgs/arrow-circle-left.png')} />
-      ),
+      nextArrow: <img src={ArrowRight} alt="slideRight" />,
+      prevArrow: <img src={ArrowLeft} alt="slideLeft" />,
       responsive: [
         {
           breakpoint: 1400,
@@ -80,21 +81,17 @@ class CategoryCarousel extends Component {
       <div className="container my-5">
         <div className="row">
           <h1 className="displayInline FiraSansSemiBold">
-            Shop<span className="color"> by Categories</span>{' '}
+            Shop<span className="color"> by Categories</span>
           </h1>
         </div>
-
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider {...settings}>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
           </div>
@@ -103,11 +100,7 @@ class CategoryCarousel extends Component {
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
           </div>
@@ -116,11 +109,7 @@ class CategoryCarousel extends Component {
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
           </div>
@@ -129,11 +118,7 @@ class CategoryCarousel extends Component {
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
           </div>
@@ -142,11 +127,7 @@ class CategoryCarousel extends Component {
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
           </div>
@@ -155,171 +136,115 @@ class CategoryCarousel extends Component {
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#D9F2F9' }}
             >
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card className="sliderItems">
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card className="sliderItems">
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Round Neck</p>
             </Card>
-          </div>{' '}
+          </div>
           <div>
             <Card className="sliderItems">
-              <Card.Img
-                className="categoryImage"
-                variant="top"
-                src={require('../../Assests/imgs/tshirt.png')}
-              />
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
               <p className="f14 FiraSansLight">Shirts</p>
             </Card>
           </div>
