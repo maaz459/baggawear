@@ -4,11 +4,22 @@
 .displayInline {
   display: inline-block;
 }
+.displayBlock {
+  display: block;
+}
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 .noBoxShadow:focus {
   box-shadow: none;
 }
 .color {
   color: #22c77c;
+}
+.mt-100px {
+  margin-top: 100px !important;
 }
 .pointer {
   cursor: pointer !important;
@@ -65,6 +76,15 @@
 }
 .floatLeft {
   float: left;
+}
+.w-20px {
+  width: 20px !important;
+}
+.w-21px {
+  width: 21px !important;
+}
+.w-22px {
+  width: 22px !important;
 }
 .w-23px {
   width: 23px !important;
@@ -187,7 +207,30 @@
 .f30 {
   font-size: 30px;
 }
+.outlineNone:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #29cb7e;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #29cb7e;
+}
 /* <---- Toggle Button -----> */
 .navbarToggler:focus,
 .searchBtn:focus,
@@ -246,7 +289,7 @@
 }
 /* <----> */
 /* <------Navbar------------> */
-.nav-item {
+.nav-items {
   font-size: 18px;
   color: black !important;
   font-weight: 400;
@@ -254,7 +297,7 @@
   text-decoration: none;
 }
 
-.nav-item::after {
+.nav-items::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -267,7 +310,7 @@
   transition: transform 0.25s ease-in-out;
 }
 
-.nav-item:hover::after {
+.nav-items:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -306,8 +349,11 @@
   align-items: center;
   color: white;
   font-size: 10px;
-  border-radius: 5px;
 }
+.search-icon:hover {
+  color: white;
+}
+
 .search-icon::before {
   content: '|';
   font-family: FiraSans-regular;
@@ -323,6 +369,7 @@
   position: relative;
   top: 0px;
   bottom: 0px;
+  margin: auto;
   left: 150px;
 }
 @media screen and (max-width: 1290px) {
@@ -368,6 +415,12 @@
   .searchBar {
     width: 80% !important;
     left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .searchBar {
+    left: 0px;
+    margin: auto;
   }
 }
 
@@ -495,7 +548,7 @@
   width: 40px;
   margin: auto;
 }
-.slick-prev {
+.categoryCarousel .slick-prev {
   position: relative;
   top: -25px;
   margin-right: 20px;
@@ -503,7 +556,7 @@
   width: 50px;
   height: 50px;
 }
-.slick-next {
+.categoryCarousel .slick-next {
   position: absolute;
   top: -25px;
   height: 50px;
@@ -515,7 +568,7 @@
 
 .productCard {
   height: 480px;
-  width: 16rem;
+  width: 85%;
   cursor: pointer;
   margin: auto;
 }
@@ -551,7 +604,7 @@
 .addCartBtn {
   background-color: #d4eee2 !important;
   float: right;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   border-radius: 10px;
   text-align: center;
 }
@@ -564,6 +617,24 @@
 .badgePriceDiv {
   position: absolute;
   bottom: 10px;
+}
+@media screen and (max-width: 576px) {
+  .productCard {
+    width: 60% !important;
+  }
+  .addCartBtn {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .productCard {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 330px) {
+  .productCard {
+    width: 100% !important;
+  }
 }
 
 /* <------------> */
@@ -599,5 +670,467 @@
 .accordion-button:not(.collapsed) {
   color: white;
   background-color: #212529;
+}
+/* <------------> */
+/* <------Edit and Trash animation------> */
+
+.editBtn,
+.trashBtn {
+  position: relative;
+  left: 0px;
+  right: 0px;
+}
+.editImg {
+  width: 90px;
+}
+
+.editBtn::after {
+  content: 'Edit';
+  position: absolute;
+  top: 0% !important;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #22c77c;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: 0.1s linear;
+  transition-delay: 0.1s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.editBtn:hover::after,
+.trashBtn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -100%;
+}
+
+.trashBtn::after {
+  content: 'Delete';
+  position: absolute;
+  top: -130% !important;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #22c77c;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: 0.1s linear;
+  transition-delay: 0.1s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+/* <------------> */
+/* <------ShoppingCart------> */
+.cartProductImg {
+  width: 30%;
+}
+
+@media screen and (max-width: 1400px) {
+  .productHeading {
+    width: 46% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .productinfoDiv {
+    width: 100% !important;
+  }
+  .productHeading {
+    width: 36% !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .productinfoDiv {
+    width: 40% !important;
+  }
+  .productHeading {
+    width: 40% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productinfoDiv {
+    width: 100% !important;
+  }
+  .cartProductImg {
+    width: 20% !important;
+  }
+}
+/* <------------> */
+
+/* <------Price card------> */
+.backToShopping {
+  width: 20px;
+}
+.voucherCard {
+  width: 20rem;
+  border-radius: 20px;
+  margin: auto;
+}
+.voucherBtn {
+  width: 25px;
+}
+.priceCardMainDiv {
+  position: sticky;
+  top: 20px;
+}
+.priceCard {
+  width: 20rem;
+  border-radius: 20px;
+}
+.checkoutImg {
+  width: 20px;
+}
+@media screen and (max-width: 991px) {
+  .priceCardMainDiv {
+    position: relative !important;
+    top: 0px;
+    padding: 20px 10px;
+  }
+  .priceCard {
+    width: 90%;
+    margin-top: 0px !important;
+  }
+  .voucherCard {
+    width: 90% !important;
+  }
+}
+
+/* <------------> */
+/* <------sign up & login------> */
+.signUpMainDiv {
+  background-image: url('./Assests//imgs/Meteor.png');
+  background-size: cover;
+  height: 100vh;
+}
+.signUpCard {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+  border-radius: 20px;
+  margin: auto auto;
+  width: fit-content;
+  height: fit-content;
+  color: #f5f5f5;
+}
+.logInCard {
+  width: 35%;
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  border-radius: 20px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  height: fit-content;
+}
+.signUpLogo {
+  width: 50px;
+}
+.signUpBtn {
+  background-color: #22c77c;
+  border: none;
+}
+.googleBtn {
+  border: 2px solid #22c77c;
+  background-color: transparent;
+}
+.googleBtn:hover {
+  color: #22c77c !important;
+  background-color: transparent;
+  border: 2px solid #22c77c;
+}
+.signUpInput {
+  background-color: transparent;
+  border: 2px solid #22c77c;
+  color: #fff;
+  padding: 6px 10px 6px 10px;
+}
+.signUpInput:focus {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #22c77c;
+  outline: none;
+  box-shadow: none;
+}
+.loginPassword {
+  background-color: transparent;
+  border: 2px solid #22c77c;
+  color: #fff;
+  padding: 6px 30px 6px 10px;
+}
+.loginPassword:focus {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #22c77c;
+  outline: none;
+  box-shadow: none;
+}
+
+.forgetButton {
+  background-color: transparent;
+  border: none;
+}
+.forgetButton:hover {
+  background-color: transparent;
+  border: none;
+}
+.eyeIcon {
+  cursor: pointer;
+  margin-left: -30px;
+}
+@media screen and (max-width: 410px) {
+  .nameDiv {
+    display: block !important;
+  }
+  .signUpInput {
+    margin: 0px;
+  }
+  .loginPassword {
+    margin: 0px;
+  }
+  .signUpLogo {
+    width: 40px;
+  }
+  .signUpCard {
+    border-radius: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  .googleBtn {
+    margin: 0px !important;
+  }
+  .signUpBtnLink {
+    margin: 5px 15px !important;
+  }
+  .signUpForm {
+    margin: 10px !important;
+  }
+  .inputPassword {
+    padding: 80px !important;
+  }
+  .inputPassword::placeholder {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .logInCard {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 553px) {
+  .logInCard {
+    width: 75%;
+  }
+  .logInCard {
+    width: 100%;
+    border: none;
+    height: 85%;
+  }
+  .signUpCard {
+    border: none;
+  }
+}
+/* <------------> */
+/* <------product ------> */
+
+.sizes {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.slectSizes {
+  background-color: #22c77c;
+  color: #fff;
+}
+.nav-tabs {
+  padding-bottom: 0px;
+}
+.nav-link {
+  border-top: 1px solid #e9ecef !important;
+  border-left: 1px solid #e9ecef !important;
+  border-right: 1px solid #e9ecef !important;
+  margin-right: 20px;
+  color: #000000;
+}
+.nav-link:hover {
+  color: #22c77c !important;
+}
+.nav-link.active {
+  color: #22c77c !important;
+}
+.productTab {
+  border-bottom: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  height: 500px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 400px) {
+  .nav-link {
+    margin-right: 0px;
+  }
+}
+.productCartBtn {
+  background-color: #d4eee2 !important;
+}
+.productCartBtn:hover {
+  color: #22c77c !important;
+}
+/* <------------> */
+/* <------productCarousel------> */
+.productImgDiv {
+  width: 60%;
+  margin: auto;
+}
+.productLargeImg {
+  width: 100%;
+  height: 500px;
+}
+.productSmallImgs {
+  width: 21%;
+  height: 85px;
+  margin: 8px 7px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.productSmallImgs:hover {
+  -webkit-filter: brightness(50%) !important;
+  filter: brightness(50%) !important;
+  border-bottom: 3px solid #22c77c;
+}
+.selectedProductSmallImgs {
+  -webkit-filter: brightness(50%) !important;
+  filter: brightness(50%) !important;
+  border-bottom: 3px solid #22c77c;
+  /* border-bottom-color: #b4b4b4 !important; */
+}
+@media screen and (max-width: 991px) {
+  .productImgDiv {
+    width: 80%;
+    margin: auto !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .productImgDiv {
+    width: 100%;
+  }
+}
+/* <------------> */
+/* <------aboutus------> */
+
+.aboutustext {
+  text-align: center;
+  font-size: 50px;
+  background: linear-gradient(
+    225deg,
+    orange,
+    yellow,
+    #22c77c,
+    rgba(96, 96, 245, 0.959)
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 8s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* <------------> */
+/* <-----contactus-------> */
+.contactusText {
+  margin: 0px 0px;
+  text-align: center;
+  font-size: 50px;
+  background: linear-gradient(
+    225deg,
+    orange,
+    yellow,
+    #22c77c,
+    rgba(96, 96, 245, 0.959) /* blue, */ /* indigo, */
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 8s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+.contactFormDiv {
+  width: 60%;
+}
+
+.sendMesage {
+  float: right;
+}
+.sendMesage:focus {
+  box-shadow: none;
+}
+
+.contactusInput:focus {
+  border-color: lightgray;
+}
+.contactusInput {
+  resize: none;
+  -moz-appearance: textfield !important;
+}
+.contactusInput::-webkit-outer-spin-button,
+.contactusInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.passwordGroup {
+  width: 50%;
+  padding-right: 10px;
+}
+.emailGroup {
+  width: 50%;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 680px) {
+  .contactFormDiv {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 490px) {
+  .contactFormDiv {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .passwordGroup {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .emailGroup {
+    width: 100%;
+    padding-left: 0px;
+  }
 }
 /* <------------> */

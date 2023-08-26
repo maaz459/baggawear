@@ -10,19 +10,19 @@ body {
 
 @font-face {
   font-family: 'FiraSans-Light';
-  src: url('./Assests/fonts/FiraSans-Light.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Light.ttf');
 }
 @font-face {
   font-family: 'FiraSans-Regular';
-  src: url('./Assests/fonts/FiraSans-Regular.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Regular.ttf');
 }
 @font-face {
   font-family: 'FiraSans-SemiBold';
-  src: url('./Assests/fonts/FiraSans-SemiBold.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-SemiBold.ttf');
 }
 @font-face {
   font-family: 'FiraSans-Bold';
-  src: url('./Assests/fonts/FiraSans-Bold.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Bold.ttf');
 }
 .FiraSansLight {
   font-family: FiraSans-Light !important;
@@ -35,4 +35,33 @@ body {
 }
 .FiraSansBold {
   font-family: FiraSans-Bold !important;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./Assests/fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./Assests/fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-SemiBold';
+  src: url('./Assests/fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./Assests/fonts/Roboto/Roboto-Bold.ttf');
+}
+.RobotoLight {
+  font-family: Roboto-Light !important;
+}
+.RobotoRegular {
+  font-family: Roboto-Regular !important;
+}
+.RobotoSemiBold {
+  font-family: Roboto-SemiBold !important;
+}
+.RobotoBold {
+  font-family: Roboto-Bold !important;
 }
