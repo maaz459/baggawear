@@ -6,7 +6,11 @@ import CategoryCarousel from '../components/pages/categoryCarousel';
 import ProductsCards from '../components/pages/productsCard';
 import SecondaryFooter from '../components/shared/secondaryFooter';
 import Footer from '../components/shared/footer';
+import HotPromotions from '../components/pages/hotPromotion';
 import SmallFooter from '../components/shared/smallFooter';
+import CardSlider from '../components/pages/cardSlider';
+import TopProducts from '../components/pages/topProducts';
+import SmallCards from '../components/pages/smallCards';
 
 class Home extends Component {
   render() {
@@ -16,7 +20,12 @@ class Home extends Component {
         <SecondaryNavbar />
         <PosterCarousel />
         <CategoryCarousel />
+        <SmallCards />
         <ProductsCards />
+        <CardSlider />
+        <HotPromotions />
+        <SmallCards />
+        <TopProducts />
         <SecondaryFooter />
         <Footer />
         <SmallFooter />

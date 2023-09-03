@@ -11,30 +11,30 @@ class PriceCard extends Component {
 
   render() {
     return (
-      <div className="priceCardMainDiv">
+      <div className="priceCardMainDiv AvenirRegular ">
         <Card className="mx-auto mt-5 priceCard">
           <div className="d-flex justify-content-between mx-3 py-3">
-            <p className="mb-0  RobotoSemiBold f18">SubTotal :</p>
-            <p className="mb-0 RobotoLight f15">PKR 45.00</p>
+            <p className="mb-0 f18">SubTotal :</p>
+            <p className="mb-0 f15 AvenirLight">RS 45.00</p>
           </div>
           <hr className="mx-3 mt-0" />
           <div className="d-flex justify-content-between mx-3 py-3">
-            <p className="mb-0  RobotoSemiBold f18">Discount :</p>
-            <p className="mb-0 RobotoLight f15">PKR 45.00</p>
+            <p className="mb-0 f18">Discount :</p>
+            <p className="mb-0 f15 AvenirLight">RS 45.00</p>
           </div>
           <hr className="mx-3 mt-0" />
           <div className="d-flex justify-content-between mx-3 py-3">
-            <p className="mb-0  RobotoSemiBold f18">Shipping :</p>
-            <p className="mb-0 RobotoLight f15">PKR 45.00</p>
+            <p className="mb-0 f18">Shipping :</p>
+            <p className="mb-0 f15 AvenirLight">RS 45.00</p>
           </div>
           <hr className="mx-3 mt-0" />
           <div className="d-flex justify-content-between mx-3 py-3">
-            <p className="mb-0  RobotoSemiBold f18">Total :</p>
-            <p className="mb-0 RobotoLight f15">PKR 45.00</p>
+            <p className="mb-0 f18">Total :</p>
+            <p className="mb-0 f15 AvenirLight">RS 45.00</p>
           </div>
           <Button
             variant="light"
-            className="RobotoRegular bgcolor mx-3 text-light my-3 outlineNone"
+            className="bgcolor mx-3 text-light my-3 outlineNone"
           >
             <img
               className="displayInline me-3 checkoutImg"

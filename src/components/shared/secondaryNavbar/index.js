@@ -1,175 +1,274 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { BiCategory } from 'react-icons/bi';
+import { TbGridDots } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
-import Instagram from '../../../Assests/imgs/instagram.png';
-import Facebook from '../../../Assests/imgs/icons8-facebook-48.png';
-import Youtube from '../../../Assests/imgs/youtube.png';
-import Whatsapp from '../../../Assests/imgs/whatsapp.png';
-import ChevronUp from '../../../Assests/imgs/chevron-up1.png';
-import ChevronDown from '../../../Assests/imgs/chevron-down1.png';
-import Home from '../../../Assests/imgs/home.png';
-import Blogs from '../../../Assests/imgs/brand-booking.png';
-import AboutUS from '../../../Assests/imgs/user.png';
-import Contact from '../../../Assests/imgs/phone-call.png';
-import Team from '../../../Assests/imgs/ourTeam.png';
-import Shop from '../../../Assests/imgs/shopping-bag.png';
+import { RiFacebookCircleLine } from 'react-icons/ri';
+import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import { LuPhoneCall } from 'react-icons/lu';
+import { PiCaretUpBold, PiCaretDownBold } from 'react-icons/pi';
 
 class SecondaryNavbar extends Component {
   constructor() {
     super();
     this.state = {
-      caretButtonAnimation: false,
+      categoryCaretAnimation: false,
+      homeCaretAnimation: false,
+      shopCaretAnimation: false,
+      blogCaretAnimation: false,
     };
   }
 
-  caretAnimation = () => {
-    const { caretButtonAnimation } = this.state;
-    if (caretButtonAnimation === true) {
-      this.setState({ caretButtonAnimation: false });
+  blogCaretAnimation = () => {
+    const { blogCaretAnimation } = this.state;
+    if (blogCaretAnimation === true) {
+      this.setState({ blogCaretAnimation: false });
     } else {
-      this.setState({ caretButtonAnimation: true });
+      this.setState({ blogCaretAnimation: true });
+    }
+  };
+
+  categoryCaretAnimation = () => {
+    const { categoryCaretAnimation } = this.state;
+    if (categoryCaretAnimation === true) {
+      this.setState({ categoryCaretAnimation: false });
+    } else {
+      this.setState({ categoryCaretAnimation: true });
+    }
+  };
+
+  homeCaretAnimation = () => {
+    const { homeCaretAnimation } = this.state;
+    if (homeCaretAnimation === true) {
+      this.setState({ homeCaretAnimation: false });
+    } else {
+      this.setState({ homeCaretAnimation: true });
+    }
+  };
+
+  shopCaretAnimation = () => {
+    const { shopCaretAnimation } = this.state;
+    if (shopCaretAnimation === true) {
+      this.setState({ shopCaretAnimation: false });
+    } else {
+      this.setState({ shopCaretAnimation: true });
     }
   };
 
   render() {
-    const { caretButtonAnimation } = this.state;
+    const {
+      categoryCaretAnimation,
+      homeCaretAnimation,
+      shopCaretAnimation,
+      blogCaretAnimation,
+    } = this.state;
 
     return (
-      <div className="d-none d-md-block">
-        <div className="container-fluid">
+      <div className="d-none d-md-block FiraSansRegular">
+        <div className="container-fluid  g-0 ">
           <div className="row mx-1">
-            <div className="col-12 col-xl-9 mx-auto">
+            <div className="col-12  col-lg-8 ">
               <Dropdown
-                className="displayInline FiraSansRegular"
+                className="displayInline"
                 onClick={() => {
-                  this.caretAnimation();
+                  this.categoryCaretAnimation();
                 }}
                 onBlur={() => {
-                  this.setState({ caretButtonAnimation: false });
+                  this.setState({ categoryCaretAnimation: false });
                 }}
               >
                 <Dropdown.Toggle
-                  className="bgcolor mb-2 dropdownBtn"
+                  className="bgcolor ms-1   dropdownBtn"
                   variant="white"
                   id="dropdown-basic"
                 >
-                  <BiCategory className="mb-1 f18 mx-1" />
+                  <TbGridDots className="mb-1 f18 me-1" />
                   <span>Browse All Categories</span>
-                  {caretButtonAnimation ? (
-                    <img
-                      className="mx-1 dropdownCaretUp f18"
-                      src={ChevronUp}
-                      alt="chevronUpIcon"
-                    />
+                  {categoryCaretAnimation ? (
+                    <PiCaretDownBold className="ms-1 dropdownCaretUp f18" />
                   ) : (
-                    <img
-                      className="mx-1 dropdownCaretDown f18"
-                      src={ChevronDown}
-                      alt="chevronDownIcon"
-                    />
+                    <PiCaretDownBold className="ms-1 dropdownCaretDown f18" />
                   )}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item className="bg-white f15 FiraSanaLight">
+                  <Dropdown.Item className="bg-white f15 AvenirLight">
                     Shorts
                   </Dropdown.Item>
-                  <Dropdown.Item className="bg-white f15 FiraSanaLight">
+                  <Dropdown.Item className="bg-white f15 AvenirLight">
                     Shorts
                   </Dropdown.Item>
-                  <Dropdown.Item className="bg-white f15 FiraSanaLight">
+                  <Dropdown.Item className="bg-white f15 AvenirLight">
                     Shorts
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <div className="displayInline  ms-2 pt-2 FiraSansRegular">
-                <Link
-                  className="mx-1 f16 textDecorationNone underlineAnimation"
-                  to="/"
-                >
-                  <img className="mb-2 mx-1" src={Home} alt="homeIcon" /> Home
+              <div className="displayInline ms-xl-5 pt-2">
+                <Link className="f16" to="/">
+                  <Dropdown
+                    className="displayInline"
+                    onClick={() => {
+                      this.homeCaretAnimation();
+                    }}
+                    onBlur={() => {
+                      this.setState({ homeCaretAnimation: false });
+                    }}
+                  >
+                    <Dropdown.Toggle
+                      className="socialMediaIcon m-0 p-0 f16"
+                      variant="none"
+                      id="dropdown-basic"
+                    >
+                      Home
+                      {homeCaretAnimation ? (
+                        <PiCaretUpBold className="ms-1 dropdownCaretUp text-dark f13" />
+                      ) : (
+                        <PiCaretDownBold className="ms-1 dropdownCaretDown text-dark f13" />
+                      )}
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </Link>
                 <Link
-                  className="mx-1 f16 d-lg-inline d-none textDecorationNone underlineAnimation"
+                  className="socialMediaIcon ms-2 f16 d-md-inline d-none textDecorationNone"
                   to="/"
                 >
-                  <img className="mb-1 mx-1" src={Blogs} alt="blogIcon" />
-                  Blogs
+                  About
+                </Link>
+                <Link className="f16 ms-2" to="/">
+                  <Dropdown
+                    className="displayInline"
+                    onClick={() => {
+                      this.shopCaretAnimation();
+                    }}
+                    onBlur={() => {
+                      this.setState({ shopCaretAnimation: false });
+                    }}
+                  >
+                    <Dropdown.Toggle
+                      className="socialMediaIcon p-0 m-0 f16 "
+                      variant="none"
+                      id="dropdown-basic"
+                    >
+                      Shop
+                      {shopCaretAnimation ? (
+                        <PiCaretUpBold className="ms-1 dropdownCaretUp text-dark f13" />
+                      ) : (
+                        <PiCaretDownBold className="ms-1 dropdownCaretDown text-dark f13" />
+                      )}
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Link>
+                <Link className="f16 ms-2" to="/">
+                  <Dropdown
+                    className="displayInline m-0 p-0"
+                    onClick={() => {
+                      this.blogCaretAnimation();
+                    }}
+                    onBlur={() => {
+                      this.setState({ blogCaretAnimation: false });
+                    }}
+                  >
+                    <Dropdown.Toggle
+                      className="socialMediaIcon f16 m-0 p-0"
+                      variant="none"
+                      id="dropdown-basic"
+                    >
+                      Blogs
+                      {blogCaretAnimation ? (
+                        <PiCaretUpBold className="ms-1 dropdownCaretUp text-dark f13" />
+                      ) : (
+                        <PiCaretDownBold className="ms-1 dropdownCaretDown text-dark f13" />
+                      )}
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                      <Dropdown.Item className="f15 AvenirLight">
+                        Shorts
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </Link>
                 <Link
-                  className="mx-1 f16 textDecorationNone underlineAnimation"
+                  className="socialMediaIcon f16 ms-2  d-md-inline d-none textDecorationNone "
                   to="/"
                 >
-                  <img className="mb-2 mx-1" src={AboutUS} alt="userIcon" />
-                  About us
-                </Link>
-                <Link
-                  className="mx-1 f16 textDecorationNone underlineAnimation"
-                  to="/contactus"
-                >
-                  <img className="mb-2 mx-1" src={Contact} alt="contactIcon" />
-                  Contact us
-                </Link>
-                <Link
-                  className="mx-1 d-lg-inline d-none mx-2 f16 textDecorationNone underlineAnimation"
-                  to="/"
-                >
-                  <img
-                    className="mb-1 mx-1 w-30px"
-                    src={Team}
-                    alt="contactIcon"
-                  />
                   Our Team
                 </Link>
                 <Link
-                  className="mx-2  f16 textDecorationNone d-lg-inline d-none underlineAnimation"
+                  className="socialMediaIcon ms-2 f16 textDecorationNone d-md-inline d-none"
                   to="/"
                 >
-                  <img className="mb-2 mx-1" src={Shop} alt="contactIcon" />
-                  Shop
+                  Contact
                 </Link>
               </div>
             </div>
-            <div className="text-right col-3 d-none d-xl-block my-auto">
+            <div className="col-4 d-none d-lg-flex justify-content-end align-items-center">
               <Link
-                className="f18 textDecorationNone"
+                className="f23 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.facebook.com/"
               >
-                <img
-                  className="mb-2 w-28px"
-                  src={Facebook}
-                  alt="facebookIcon"
-                />
+                <RiFacebookCircleLine />
               </Link>
               <Link
-                className="mx-1 f18 textDecorationNone"
+                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.instagram.com/accounts/login/"
               >
-                <img
-                  className="mb-2 mx-1 w-23px"
-                  src={Instagram}
-                  alt="instagramIcon"
-                />
+                <FiTwitter />
               </Link>
               <Link
-                className="mx-1 f18 textDecorationNone"
+                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                to="https://www.instagram.com/accounts/login/"
+              >
+                <FiInstagram />
+              </Link>
+              <Link
+                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.youtube.com"
               >
-                <img className="mb-2 w-23px" src={Youtube} alt="youtubeIcon" />
+                <FiYoutube />
               </Link>
-              <span className="mx-1 f25 whatsappNumber">|</span>
-              <Link className="mx-1 f18 textDecorationNone" to="/">
-                <img
-                  className="mb-2 w-23px"
-                  src={Whatsapp}
-                  alt="whatsappIcon"
-                />
-
-                <span className="f14 FiraSansRegular whatsappNumber">
-                  &nbsp; 000 000 000 000
-                </span>
+              <Link
+                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                to="https://www.youtube.com"
+              >
+                <FaWhatsapp />
               </Link>
+              <span className="mx-1 mb-1 f25 text-muted">|</span>
+              <LuPhoneCall className="f20 mb-0 socialMediaIcon" />
+              <p className="f12 displayInline AvenirLight ms-2 mb-0 pb-0">
+                <span>000 000 000 000</span>{' '}
+                <span className="text-muted displayBlock">timing</span>{' '}
+              </p>
             </div>
           </div>
         </div>

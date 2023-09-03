@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Card from 'react-bootstrap/Card';
+import {
+  HiOutlineArrowSmallRight,
+  HiOutlineArrowSmallLeft,
+} from 'react-icons/hi2';
 import Tshirt from '../../../Assests/imgs/tshirt.png';
-import ArrowRight from '../../../Assests/imgs/arrow-circle-right.png';
-import ArrowLeft from '../../../Assests/imgs/arrow-circle-left.png';
 
 class CategoryCarousel extends Component {
   constructor() {
     super();
     this.state = {};
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+  }
+
+  next() {
+    this.slider.slickNext();
+  }
+
+  previous() {
+    this.slider.slickPrev();
   }
 
   render() {
@@ -18,8 +30,7 @@ class CategoryCarousel extends Component {
       speed: 500,
       slidesToShow: 12,
       slidesToScroll: 10,
-      nextArrow: <img src={ArrowRight} alt="slideRight" />,
-      prevArrow: <img src={ArrowLeft} alt="slideLeft" />,
+      arrows: false,
       responsive: [
         {
           breakpoint: 1400,
@@ -78,39 +89,45 @@ class CategoryCarousel extends Component {
     };
 
     return (
-      <div className="container my-5">
-        <div className="row">
+      <div className="container mt-80px">
+        <div className="d-flex justify-content-between">
           <h1 className="displayInline FiraSansSemiBold">
-            Shop<span className="color"> by Categories</span>
+            Shop By<span className="color"> Category</span>
           </h1>
+          <div className="d-none d-md-flex justify-content-end ">
+            <p className="bg-light HiOutlineArrowSmallLeft rounded-circle pointer p-1 me-3">
+              <HiOutlineArrowSmallLeft
+                color="#000000"
+                size={30}
+                onClick={this.previous}
+              />
+            </p>
+
+            <p className="bgcolor HiOutlineArrowSmallRight rounded-circle pointer p-1">
+              <HiOutlineArrowSmallRight
+                color="#fff"
+                size={30}
+                onClick={this.next}
+              />
+            </p>
+          </div>
         </div>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Slider className="categoryCarousel" {...settings}>
+        {/* eslint-disable react/jsx-props-no-spreading */}
+        <Slider
+          {...settings}
+          ref={c => {
+            this.slider = c;
+          }}
+          className="categoryCarousel AvenirRegular"
+          {...settings}
+        >
           <div>
             <Card
               className="sliderItems"
               style={{ backgroundColor: '#F4EAEA' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
-            </Card>
-          </div>
-          <div>
-            <Card
-              className="sliderItems"
-              style={{ backgroundColor: '#F4EAEA' }}
-            >
-              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
-            </Card>
-          </div>
-          <div>
-            <Card
-              className="sliderItems"
-              style={{ backgroundColor: '#F4EAEA' }}
-            >
-              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -119,7 +136,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#F4EAEA' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -128,7 +145,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#F4EAEA' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -137,7 +154,25 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#F4EAEA' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
+            </Card>
+          </div>
+          <div>
+            <Card
+              className="sliderItems"
+              style={{ backgroundColor: '#F4EAEA' }}
+            >
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
+              <p className="f14 AvenirLighth">Round Neck</p>
+            </Card>
+          </div>
+          <div>
+            <Card
+              className="sliderItems"
+              style={{ backgroundColor: '#F4EAEA' }}
+            >
+              <Card.Img className="categoryImage" variant="top" src={Tshirt} />
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -146,7 +181,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -155,7 +190,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -164,7 +199,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -173,7 +208,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -182,7 +217,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -191,7 +226,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -200,7 +235,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -209,7 +244,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -218,7 +253,7 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
@@ -227,25 +262,25 @@ class CategoryCarousel extends Component {
               style={{ backgroundColor: '#D9F2F9' }}
             >
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
             <Card className="sliderItems">
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
             <Card className="sliderItems">
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Round Neck</p>
+              <p className="f14 AvenirLighth">Round Neck</p>
             </Card>
           </div>
           <div>
             <Card className="sliderItems">
               <Card.Img className="categoryImage" variant="top" src={Tshirt} />
-              <p className="f14 FiraSansLight">Shirts</p>
+              <p className="f14 AvenirLighth">Shirts</p>
             </Card>
           </div>
         </Slider>

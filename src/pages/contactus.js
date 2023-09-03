@@ -29,25 +29,25 @@ class ContactUS extends Component {
           <Row>
             <div className="text-center">
               <h1 className="contactusText FiraSansRegular">CONTACT US</h1>
-              <p className="RobotoLight">
+              <p className="AvenirRegular">
                 We&apos;re thrilled to connect with you! Please feel free to
                 reach out to us using any of the methods below. Your questions,
                 feedback, and inquiries are always welcome.
               </p>
               <h3 className="mt-4 FiraSansRegular">Customer Support</h3>
-              <p className="RobotoLight">
+              <p className="AvenirRegular">
                 Our dedicated support team is available to assist you on
                 weekdays from [Opening Hours]. You can contact us by phone at
                 [Phone Number] or via email at support@example.com. We&apos;re
                 here to make sure you have the best experience possible.
               </p>
               <h3 className="FiraSansRegular">Visit Us</h3>
-              <p className="RobotoLight">
+              <p className="AvenirRegular">
                 If you prefer a face-to-face conversation, you can find us at
                 our office located at: [Your Office Address]
               </p>
               <h3 className="FiraSansRegular">Connect on Social Media</h3>
-              <p className="RobotoLight">
+              <p className="AvenirRegular">
                 Stay updated with our latest news, promotions, and more through
                 our social media channels. Connect with us on:
               </p>
@@ -86,7 +86,7 @@ class ContactUS extends Component {
         </Container>
         <div className="container my-5 contactFormDiv">
           <h3 className="color FiraSansRegular">Drop Us a Line</h3>
-          <p className="RobotoLight">
+          <p className="AvenirRegular">
             We appreciate your interest in [Your Company Name]. Have a question
             or feedback? Feel free to drop us a message using the contact form
             below. We&apos;ll get back to you as soon as we can.
@@ -95,7 +95,7 @@ class ContactUS extends Component {
             <Form.Group controlId="name">
               <Form.Control
                 autoComplete="off"
-                className="contactusInput RobotoLight outlineNone"
+                className="contactusInput AvenirRegular outlineNone"
                 type="text"
                 name="name"
                 placeholder="Write your Name Here"
@@ -106,7 +106,7 @@ class ContactUS extends Component {
               <Form.Group className="passwordGroup" controlId="email">
                 <Form.Control
                   autoComplete="off"
-                  className="contactusInput RobotoLight outlineNone my-3"
+                  className="contactusInput AvenirRegular outlineNone my-3"
                   type="number"
                   placeholder="Phone Number"
                 />
@@ -114,7 +114,7 @@ class ContactUS extends Component {
               <Form.Group className="emailGroup" controlId="email">
                 <Form.Control
                   autoComplete="off"
-                  className="contactusInput RobotoLight outlineNone my-3"
+                  className="contactusInput AvenirRegular outlineNone my-3"
                   type="email"
                   placeholder="Email Address"
                 />
@@ -124,7 +124,7 @@ class ContactUS extends Component {
             <Form.Group controlId="message">
               <Form.Control
                 autoComplete="off"
-                className="contactusInput RobotoLight outlineNone"
+                className="contactusInput AvenirRegular outlineNone"
                 as="textarea"
                 rows={10}
                 pattern="[0-9]*"

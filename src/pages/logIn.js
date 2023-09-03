@@ -18,7 +18,7 @@ class LogIn extends Component {
     const { forgetPassword, inputType } = this.state;
 
     return (
-      <div className="signUpMainDiv">
+      <div className="signUpMainDiv AvenirRegular">
         <Card className="logInCard">
           <div className="d-flex mx-auto my-2 ">
             <img className="signUpLogo" src={Logo} alt="Logo" />
@@ -28,22 +28,22 @@ class LogIn extends Component {
           {forgetPassword ? (
             <Form className="mx-3 mx-xl-5 my-3 signUpForm">
               <Form.Group className="mb-3">
-                <Form.Label className="ms-2 RobotoLight">
+                <Form.Label className="ms-2 AvenirLight">
                   Enter Email
                 </Form.Label>
                 <Form.Control
                   autoComplete="false"
-                  className="RobotoRegular rounded-pill  signUpInput "
+                  className="AvenirRegular rounded-pill  signUpInput "
                   type="email"
                   placeholder=" Email"
                 />
               </Form.Group>
               <Form.Group className="mb-1 ">
-                <Form.Label className="ms-2 my-auto RobotoLight d-flex justify-content-between">
+                <Form.Label className="ms-2 my-auto AvenirLight d-flex justify-content-between">
                   Enter Password
                   <Button
                     variant="light"
-                    className="text-light f12 RobotoLight outlineNone forgetButton"
+                    className="text-light f12 AvenirLight outlineNone forgetButton"
                     onClick={() => {
                       this.setState({ forgetPassword: false });
                     }}
@@ -53,7 +53,7 @@ class LogIn extends Component {
                 </Form.Label>
 
                 <input
-                  className="RobotoRegular w-100  rounded-pill loginPassword"
+                  className="AvenirRegular w-100  rounded-pill loginPassword"
                   autoComplete="false"
                   type={inputType}
                   placeholder="Password"
@@ -80,7 +80,7 @@ class LogIn extends Component {
               <Link to="/">
                 <Button
                   variant="light"
-                  className="w-100 my-3 RobotoRegular signUpBtn outlineNone  text-center text-dark bgcolor rounded-pill f19"
+                  className="w-100 my-3 AvenirRegular signUpBtn outlineNone  text-center text-dark bgcolor rounded-pill f19"
                 >
                   Log In
                 </Button>
@@ -88,18 +88,18 @@ class LogIn extends Component {
               <Link to="/signup">
                 <Button
                   variant="light"
-                  className="w-100 RobotoRegular outlineNone text-center color rounded-pill f19 googleBtn"
+                  className="w-100 AvenirRegular outlineNone text-center color rounded-pill f19 googleBtn"
                 >
                   Sign Up
                 </Button>
               </Link>
 
-              <p className="w-100 RobotoRegular text-center my-2">or</p>
+              <p className="w-100 AvenirRegular text-center my-2">or</p>
 
               <Link to="/">
                 <Button
                   variant="light"
-                  className="w-100 my-2 RobotoRegular outlineNone text-center color rounded-pill f19 googleBtn"
+                  className="w-100 my-2 AvenirRegular outlineNone text-center color rounded-pill f19 googleBtn"
                 >
                   <img className="mx-2 w-25px" src={Google} alt="googleIcon" />{' '}
                   Sign in with google
@@ -109,11 +109,11 @@ class LogIn extends Component {
           ) : (
             <Form className="mx-3 mx-xl-5 my-3 signUpForm">
               <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label className="ms-2 RobotoLight">
+                <Form.Label className="ms-2 AvenirLight">
                   Enter Email
                 </Form.Label>
                 <Form.Control
-                  className="RobotoRegular rounded-pill signUpInput "
+                  className="AvenirRegular rounded-pill signUpInput "
                   type="email"
                   placeholder="Email"
                 />
@@ -121,18 +121,18 @@ class LogIn extends Component {
               <Link to="/" className=" ">
                 <Button
                   variant="light"
-                  className="w-100 RobotoRegular signUpBtn outlineNone  text-center text-dark bgcolor rounded-pill f19"
+                  className="w-100 AvenirRegular signUpBtn outlineNone  text-center text-dark bgcolor rounded-pill f19"
                 >
                   Reset Password
                 </Button>
               </Link>
-              <p className="w-100 RobotoRegular text-center my-2">or</p>
+              <p className="w-100 AvenirRegular text-center my-2">or</p>
               <Button
                 onClick={() => {
                   this.setState({ forgetPassword: true });
                 }}
                 variant="light"
-                className="w-100 RobotoRegular outlineNone text-center color rounded-pill f19 googleBtn"
+                className="w-100 AvenirRegular outlineNone text-center color rounded-pill f19 googleBtn"
               >
                 Login
               </Button>

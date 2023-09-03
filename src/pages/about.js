@@ -16,7 +16,6 @@ class AboutUs extends Component {
       <div>
         <Topbar />
         <SecondaryNavbar />
-
         <h1 className="aboutustext FiraSansRegular">ABOUT US</h1>
         <SecondaryFooter />
         <Footer />
