@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Exchange from '../../../Assests/imgs/exchangeGif.gif';
-import Dilivery from '../../../Assests/imgs/diliverGif.gif';
-import Hours from '../../../Assests/imgs/24 hours Gif.gif';
-import Location from '../../../Assests/imgs/LocationGif.gif';
+import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
+import pic from '../../../Assests/imgs/Online-Food-Delivery-Apps.png.webp';
 
 class SecondaryFooter extends Component {
   constructor() {
@@ -13,98 +11,43 @@ class SecondaryFooter extends Component {
 
   render() {
     return (
-      <div className="container-fluid my-5 mt-5 mt-100px secondaryFooter">
-        <hr className="mb-4" />
-        <div className="row justify-content-center">
-          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 my-3">
-            <Link
-              to="/"
-              className="textDecorationNone d-flex  text-align-center"
-            >
-              <img
-                alt="diliveryGif"
-                className="mx-2 secondaryFooterImg"
-                src={Dilivery}
-              />
+      <div className="container AvenirRegular mt-100px secondaryFooterDiv">
+        <div className="row mx-2">
+          <div className="col-12 col-md-7 my-auto py-3">
+            <div>
+              <h3 className="AvenirBold">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              </h3>
               <p>
-                <span className="text-uppercase secondaruFooterText FiraSansBold">
-                  Shipping Charges:
-                </span>{' '}
-                <br />
-                <span className="FiraSansRegular">
-                  Flat Charges:PKR 99 on all orders
-                </span>
+                Lorem ipsum dolor sit amet
+                <span className="color"> consectetur.</span>
               </p>
-            </Link>
+              <Form.Control
+                type="Email"
+                placeholder="Enter Email Address"
+                className="outlineNone mb-2 subscribeInput "
+              />
+              <Form.Control
+                type="Number"
+                placeholder="Enter Phone Number"
+                className="outlineNone subscribeInput mb-2 "
+              />
+              <Button
+                variant="none"
+                className="bgcolor outlineNone subscribeInput  text-light text-center"
+              >
+                Subscribe
+              </Button>
+            </div>
           </div>
-
-          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 my-3">
-            <Link
-              to="/"
-              className="textDecorationNone d-flex  text-align-center"
-            >
-              <img
-                alt="24Hoursgif"
-                className="secondaryFooterImg mx-2"
-                src={Hours}
-              />
-              <p>
-                <span className="text-uppercase secondaruFooterText FiraSansBold">
-                  Support 24/7 :
-                </span>{' '}
-                <br />
-                <span className="FiraSansRegular">
-                  contact us 24 hours a day, 7 days a week
-                </span>
-              </p>
-            </Link>
-          </div>
-
-          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 my-3">
-            <Link
-              to="/"
-              className="textDecorationNone d-flex text-align-center"
-            >
-              <img
-                alt="locationgif"
-                className="secondaryFooterImg mx-2"
-                src={Location}
-              />
-              <p>
-                <span className="text-uppercase secondaruFooterText FiraSansBold">
-                  Track your order :
-                </span>{' '}
-                <br />
-                <span className="FiraSansRegular">
-                  track your order for quick updates
-                </span>
-              </p>
-            </Link>
-          </div>
-
-          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 my-3">
-            <Link
-              to="/"
-              className="textDecorationNone d-flex  text-align-center"
-            >
-              <img
-                alt="exchangegif"
-                className="secondaryFooterImg mx-2"
-                src={Exchange}
-              />
-              <p>
-                <span className="text-uppercase secondaruFooterText FiraSansBold">
-                  Return and exchange :
-                </span>
-                <br />
-                <span className="FiraSansRegular">
-                  Please view return and exchange policys
-                </span>
-              </p>
-            </Link>
+          <div className="col-5 m-auto">
+            <img
+              src={pic}
+              alt="dilivery"
+              className="w-100 d-none d-md-inline"
+            />
           </div>
         </div>
-        <hr className="mt-4" />
       </div>
     );
   }

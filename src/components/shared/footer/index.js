@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Instagram from '../../../Assests/imgs/instagram.png';
-import Facebook from '../../../Assests/imgs/icons8-facebook-48.png';
-import Youtube from '../../../Assests/imgs/youtube.png';
-import Whatsapp from '../../../Assests/imgs/whatsapp.png';
+import { RiFacebookCircleLine } from 'react-icons/ri';
+import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import { LuPhoneCall } from 'react-icons/lu';
+import { CiMail } from 'react-icons/ci';
+import { IoLocationOutline } from 'react-icons/io5';
+import { LiaStopwatchSolid } from 'react-icons/lia';
+import GooglePlayImg from '../../../Assests/imgs/app-store-png-logo-33123.png';
 
 class Footer extends Component {
   constructor() {
@@ -16,165 +17,150 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="bg-dark text-light d-none d-lg-block mt-100px">
+      <div className="d-none d-md-block mt-80px">
         <div className="container py-5">
-          <div className="row justify-content-center">
+          <div className="row">
             <div className="col-3">
-              <h5 className="FireSansSemiBold">ABOUT BAGGAWEAR</h5>
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                CAREERS
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                ABOUT US
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                STORE ADDRESS
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                STORE LOCATOR
-              </Link>
+              <h5 className="FiraSansSemiBold">BAGGAWEAR</h5>
+              <div className="d-flex">
+                <Link
+                  className="f23 text-muted socialMediaIcon AvenirRegular textDecorationNone mb-2"
+                  to="https://www.facebook.com/"
+                >
+                  <RiFacebookCircleLine />
+                </Link>
+                <Link
+                  className="mx-1 f23 text-muted socialMediaIcon AvenirRegular textDecorationNone mb-1"
+                  to="https://www.instagram.com/accounts/login/"
+                >
+                  <FiTwitter />
+                </Link>
+                <Link
+                  className="mx-1 f23 text-muted socialMediaIcon AvenirRegular textDecorationNone mb-1"
+                  to="https://www.instagram.com/accounts/login/"
+                >
+                  <FiInstagram />
+                </Link>
+                <Link
+                  className="mx-1 f23 text-muted socialMediaIcon AvenirRegular textDecorationNone mb-1"
+                  to="https://www.youtube.com"
+                >
+                  <FiYoutube />
+                </Link>
+                <Link
+                  className="mx-1 f23 text-muted socialMediaIcon AvenirRegular textDecorationNone mb-1"
+                  to="https://youtu.be/1wXC6MeIOoQ"
+                >
+                  <FaWhatsapp />
+                </Link>
+              </div>
+              <div className="mt-2 AvenirRegular">
+                <p>
+                  <LuPhoneCall className="f25 color" />
+                  <span className="f15 ms-2">000 000 000 000</span>
+                </p>
+                <p>
+                  <CiMail className="f25 color" />
+                  <span className="f15 ms-2">email address</span>
+                </p>
+                <p>
+                  <IoLocationOutline className="f25 color" />
+                  <span className="f15 ms-2">location</span>
+                </p>
+                <p>
+                  <LiaStopwatchSolid className="f25 color" />
+                  <span className="f15 ms-2">timing</span>
+                </p>
+              </div>
             </div>
 
             <div className="col-3">
-              <h5 className="FireSansSemiBold">CUSTOMER CARE</h5>
+              <h5 className="FiraSansSemiBold">Company</h5>
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                SERVICES
+                About Us
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/contactus"
               >
-                CONTACT US
+                Service
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                PAYMENT GUIDE
+                Case Studies
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                PRIVACY POLICY
+                Blogs
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                TRACK MY ORDER
+                Contact
               </Link>
               <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                TERMS & CONDITION
-              </Link>
-              <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                RETURN & ENCHANGE
-              </Link>
             </div>
             <div className="col-3">
-              <h5 className="FireSansSemiBold">MY ACCOUNT </h5>
+              <h5 className="FiraSansSemiBold">Account </h5>
+
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                LOGIN
-              </Link>
-              <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
                 SIGN IN
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/cart"
               >
                 VIEW CART
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
                 MY WISHLIST
               </Link>
+              <br />
+              <Link
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
+                to="/"
+              >
+                Track My Order
+              </Link>
+              <br />
+              <Link
+                className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
+                to="/"
+              >
+                Compare Products
+              </Link>
             </div>
 
-            <div className="col-3">
-              <h5 className="FiraSansSemiBold">FIND US ON :</h5>
-              <div>
-                <Link to="/" className="displayInline">
-                  <img alt="whatsappImg" className="w-27px" src={Whatsapp} />
-                </Link>
-                <Link to="/" className="displayInline">
-                  <img
-                    alt="instagramImg"
-                    className="w-27px ms-2"
-                    src={Instagram}
-                  />
-                </Link>
-                <Link to="/" className="displayInline">
-                  <img
-                    alt="facebookImg"
-                    className="w-30px ms-2"
-                    src={Facebook}
-                  />
-                </Link>
-                <Link to="/" className="displayInline">
-                  <img alt="youtubeImg" className="w-30px ms-2" src={Youtube} />
-                </Link>
-              </div>
-              <div>
-                <h5 className="mt-3 FiraSansSemiBold">
-                  SIGN UP FOR BAGGAWEAR LATEST UPDATES :
-                </h5>
-                <InputGroup className="mt-3 bg-light rounded-pill">
-                  <Form.Control
-                    placeholder="ENTER EMAIL"
-                    className="noBoxShadow FiraSansRegular"
-                    type="email"
-                  />
-                  <Button
-                    variant="light"
-                    className="bgcolor noBoxShadow text-light "
-                    id="button-addon2"
-                  >
-                    SIGN UP
-                  </Button>
-                </InputGroup>
-              </div>
+            <div className="col-3 ">
+              <h5 className="FiraSansSemiBold">Download</h5>
+              <p className="text-muted AvenirRegular">
+                From App Store or Google Play
+              </p>
+              <img
+                className="text-muted w-60 pointer AvenirRegular"
+                src={GooglePlayImg}
+                alt="GooglePlayImg"
+              />
             </div>
           </div>
         </div>

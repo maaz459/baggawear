@@ -37,31 +37,47 @@ body {
   font-family: FiraSans-Bold !important;
 }
 
+
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url('./Assests/fonts/Roboto/Roboto-Light.ttf');
-}
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url('./Assests/fonts/Roboto/Roboto-Regular.ttf');
+  font-family: 'Gordita-Light';
+  src: url('./Assests/fonts/Gordita/Gordita-Light.otf');
 }
 @font-face {
-  font-family: 'Roboto-SemiBold';
-  src: url('./Assests/fonts/Roboto/Roboto-Medium.ttf');
+  font-family: 'Gordita-Regular';
+  src: url('./Assests/fonts/Gordita/Gordita-Regular.otf');
 }
 @font-face {
-  font-family: 'Roboto-Bold';
-  src: url('./Assests/fonts/Roboto/Roboto-Bold.ttf');
+  font-family: 'Gordita-Bold';
+  src: url('./Assests/fonts/Gordita/Gordita-Bold.otf');
 }
-.RobotoLight {
-  font-family: Roboto-Light !important;
+.GorditaLight {
+  font-family: Gordita-Light !important;
 }
-.RobotoRegular {
-  font-family: Roboto-Regular !important;
+.GorditaRegular {
+  font-family: Gordita-Regular !important;
 }
-.RobotoSemiBold {
-  font-family: Roboto-SemiBold !important;
+.GorditaBold {
+  font-family: Gordita-Bold !important;
 }
-.RobotoBold {
-  font-family: Roboto-Bold !important;
+
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-It.otf');
+}
+@font-face {
+  font-family: 'Avenir-Regular';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-Regular.otf');
+}
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-Bold.otf');
+}
+.AvenirLight {
+  font-family: Avenir-Light !important;
+}
+.AvenirRegular {
+  font-family: Avenir-Regular !important;
+}
+.AvenirBold {
+  font-family: Avenir-Bold !important;
 }

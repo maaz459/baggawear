@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Instagram from '../../../Assests/imgs/instagram.png';
-import Facebook from '../../../Assests/imgs/icons8-facebook-48.png';
-import Youtube from '../../../Assests/imgs/youtube.png';
-import Whatsapp from '../../../Assests/imgs/whatsapp.png';
+import { RiFacebookCircleLine } from 'react-icons/ri';
+import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import { LuPhoneCall } from 'react-icons/lu';
+import { CiMail } from 'react-icons/ci';
+import { IoLocationOutline } from 'react-icons/io5';
+import { LiaStopwatchSolid } from 'react-icons/lia';
+import GooglePlayImg from '../../../Assests/imgs/app-store-png-logo-33123.png';
 
 class SmallFooter extends Component {
   constructor() {
@@ -17,182 +18,162 @@ class SmallFooter extends Component {
 
   render() {
     return (
-      <div className="smallFooter d-block d-lg-none bg-dark text-ligh mt-100px">
-        <div className="py-3 mx-3">
-          <h5 className="text-light FiraSansSemiBold">
-            SIGN UP FOR BAGGAWEAR LATEST UPDATES :
-          </h5>
-          <InputGroup className="mt-3 bg-light rounded-pill">
-            <Form.Control
-              placeholder="ENTER EMAIL"
-              className="noBoxShadow"
-              type="email"
-            />
-            <Button
-              variant="light"
-              className="bgcolor noBoxShadow text-light FiraSansSemiBold "
-              id="button-addon2"
-            >
-              SIGN UP
-            </Button>
-          </InputGroup>
-        </div>
+      <div className="smallFooter AvenirRegular d-block d-md-none bg-white text-dark mt-80px">
         <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>
-              {' '}
               <h5 className="FiraSansSemiBold">ABOUT BAGGAWEAR</h5>
             </Accordion.Header>
-            <Accordion.Body className="bg-dark">
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                CAREERS
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                ABOUT US
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                STORE ADDRESS
-              </Link>
-              <br />
-              <Link
-                to="/"
-                className="textDecorationNone FiraSansLight text-light f13 underlineAnimation"
-              >
-                STORE LOCATOR
-              </Link>
+            <Accordion.Body className="bg-white">
+              <div className="d-flex">
+                <Link
+                  className="text-muted socialMediaIcon textDecorationNone mb-2"
+                  to="https://www.facebook.com/"
+                >
+                  <RiFacebookCircleLine size={28} />
+                </Link>
+                <Link
+                  className="mx-1 text-muted socialMediaIcon textDecorationNone mb-1"
+                  to="https://www.instagram.com/accounts/login/"
+                >
+                  <FiTwitter size={28} />
+                </Link>
+                <Link
+                  className="mx-1 text-muted socialMediaIcon textDecorationNone mb-1"
+                  to="https://www.instagram.com/accounts/login/"
+                >
+                  <FiInstagram size={28} />
+                </Link>
+                <Link
+                  className="mx-1 text-muted socialMediaIcon textDecorationNone mb-1"
+                  to="https://www.youtube.com"
+                >
+                  <FiYoutube size={28} />
+                </Link>
+                <Link
+                  className="mx-1 text-muted socialMediaIcon textDecorationNone mb-1"
+                  to="https://youtu.be/1wXC6MeIOoQ"
+                >
+                  <FaWhatsapp size={28} />
+                </Link>
+              </div>
+              <div className="mt-2 AvenirRegular">
+                <p>
+                  <LuPhoneCall size={25} className="color" />
+                  <span className="f15 ms-2">000 000 000 000</span>
+                </p>
+                <p>
+                  <CiMail size={25} className="color" />
+                  <span className="f15 ms-2">email address</span>
+                </p>
+                <p>
+                  <IoLocationOutline size={25} className="color" />
+                  <span className="f15 ms-2">location</span>
+                </p>
+                <p>
+                  <LiaStopwatchSolid size={25} className="color" />
+                  <span className="f15 ms-2">timing</span>
+                </p>
+              </div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>
-              {' '}
-              <h5 className="FiraSansSemiBold">CUSTOMER CARE</h5>
+              <h5 className="FiraSansSemiBold">Company</h5>
             </Accordion.Header>
-            <Accordion.Body className="bg-dark">
+            <Accordion.Body className="bg-white">
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone"
                 to="/"
+              >
+                About Us
+              </Link>
+              <br />
+              <Link
+                className="f15 underlineAnimation textDecorationNone"
+                to="/contactus"
               >
                 SERVICES
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/contactus"
+                className="f15 underlineAnimation textDecorationNone"
+                to="/"
               >
-                CONTACT US
+                Case Studies
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone"
                 to="/"
               >
-                PAYMENT GUIDE
+                Blogs
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone"
                 to="/"
               >
-                PRIVACY POLICY
+                Contact
               </Link>
               <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                TRACK MY ORDER
-              </Link>
-              <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                TERMS & CONDITION
-              </Link>
-              <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                RETURN & ENCHANGE
-              </Link>
             </Accordion.Body>
           </Accordion.Item>
 
           <Accordion.Item eventKey="2">
             <Accordion.Header>
               {' '}
-              <h5 className="FiraSansSemiBold">My ACCOUNT</h5>
+              <h5 className="FiraSansSemiBold">Account</h5>
             </Accordion.Header>
-            <Accordion.Body className="bg-dark">
+            <Accordion.Body className="bg-white">
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
-              >
-                LOGIN
-              </Link>
-              <br />
-              <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
+                className="f15 underlineAnimation textDecorationNone"
                 to="/"
               >
                 SIGN IN
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/cart"
+                className="f15 underlineAnimation textDecorationNone"
+                to="/"
               >
                 VIEW CART
               </Link>
               <br />
               <Link
-                className="f13 underlineAnimation textDecorationNone FiraSansLight text-light"
-                to="/"
+                className="f15 underlineAnimation textDecorationNone"
+                to="/cart"
               >
                 MY WISHLIST
+              </Link>
+              <br />
+              <Link
+                className="f15 underlineAnimation textDecorationNone"
+                to="/"
+              >
+                Track My Order
+              </Link>
+              <br />
+              <Link
+                className="f15 underlineAnimation textDecorationNone"
+                to="/"
+              >
+                Compare Products
               </Link>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
 
-        <div className="container-fluid  p-3">
-          <div className="row mt-3">
-            <h5 className="text-light FiraSansSemiBold">FOLLOW US ON</h5>
-            <div>
-              <Link to="/" className="displayInline">
-                <img className="w-27px" src={Whatsapp} alt="whatsappIcon" />
-              </Link>
-              <Link to="/" className="displayInline">
-                <img
-                  className="w-27px ms-2"
-                  src={Instagram}
-                  alt="instagramIcon"
-                />
-              </Link>
-              <Link to="/" className="displayInline">
-                <img
-                  className="w-30px ms-2"
-                  src={Facebook}
-                  alt="facebookIcon"
-                />
-              </Link>
-              <Link to="/" className="displayInline">
-                <img className="w-30px ms-2" src={Youtube} alt="youtubeIcon" />
-              </Link>
-            </div>
-          </div>
+        <div className="p-3">
+          <h5 className="FiraSansSemiBold">Download</h5>
+          <p className="text-muted AvenirRegular">
+            From App Store or Google Play
+          </p>
+          <img
+            className="text-muted w-30 pointer AvenirRegular"
+            src={GooglePlayImg}
+            alt="GooglePlayImg"
+          />
         </div>
       </div>
     );

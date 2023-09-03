@@ -32,7 +32,7 @@ class ProductCarousel extends Component {
 
   render() {
     return (
-      <div className="productImgDiv">
+      <div className="productImgDiv AvenirRegular">
         <img
           className="d-flex productLargeImg "
           src={Img1}

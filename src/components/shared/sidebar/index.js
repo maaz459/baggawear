@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
-import { BiCategory } from 'react-icons/bi';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Home from '../../../Assests/imgs/home.png';
-import Team from '../../../Assests/imgs/group.png';
 import Search from '../../../Assests/imgs/search.png';
-import Wishlist from '../../../Assests/imgs/heart.png';
-import Cart from '../../../Assests/imgs/shopping-cart.png';
 import ChevronUp from '../../../Assests/imgs/chevron-up.png';
 import ChevronDown from '../../../Assests/imgs/chevron-down.png';
 
@@ -33,7 +28,10 @@ class Sidebar extends Component {
     const { caretButtonAnimation } = this.state;
     const { canvasOpen } = this.props;
     return (
-      <Offcanvas className="d-md-none w-70 bg-light" show={canvasOpen}>
+      <Offcanvas
+        className="d-md-none w-70 bg-light FiraSansRegular"
+        show={canvasOpen}
+      >
         <Offcanvas.Header>
           <Offcanvas.Title className="mx-auto display-2 color FiraSansBold">
             BaggaWear
@@ -41,67 +39,47 @@ class Sidebar extends Component {
         </Offcanvas.Header>
         <hr className="mx-3 " />
 
-        <div className="search searchBar my-auto d-flex">
+        <div
+          className="AvenirRegular offcanvasSearch offcanvasSearchBar 
+                   my-auto d-flex"
+        >
           <input
             type="text"
-            className="search-input bg-light FiraSansRegular"
+            className="search-input bg-light"
             placeholder="Search here..."
             name=""
           />
-          <a href="/" className="search-icon">
+          <a href="/" className="offcanvasSrhIcon">
             <img src={Search} alt="searchIcon" />
           </a>
         </div>
 
-        <Offcanvas.Body className="mx-auto categoryDropdownMenu">
-          <div className="my-4">
-            <Link className="text-decoration-none" to="/">
-              <h3>
-                <img className="mx-2 mb-2 w-23px" src={Home} alt="homeIcon" />
-                <span className="text-muted underlineAnimation FiraSansRegular">
-                  Home
-                </span>
-              </h3>
-            </Link>
-          </div>
-          <div className="my-4">
-            <Link className="text-decoration-none" to="/">
-              <h3>
-                <img
-                  className="mx-2 mb-2 w-23px"
-                  src={Wishlist}
-                  alt="heartIcon"
-                />
-                <span className="text-muted underlineAnimation FiraSansRegular">
-                  Wishlist
-                </span>
-              </h3>
-            </Link>
-          </div>
-          <div className="my-4">
+        <Offcanvas.Body className="text-center categoryDropdownMenu">
+          <div className="my-3">
             <Link className="text-decoration-none" to="/cart">
-              <h3>
-                <img
-                  className="mx-2 mb-2 w-23px"
-                  src={Cart}
-                  alt="shoppingCartIcon"
-                />
-                <span className="text-muted underlineAnimation FiraSansRegular">
-                  Cart
-                </span>
+              <h3 className="text-muted">Cart</h3>
+            </Link>
+          </div>
+          <div className="my-3">
+            <Link className="text-decoration-none" to="/">
+              <h3 className="text-muted">
+                <span>Home</span>
               </h3>
             </Link>
           </div>
-          <div className="my-4 ">
+
+          <div className="my-3">
+            <Link className="text-decoration-none" to="/">
+              <h3 className="text-muted">Wishlist</h3>
+            </Link>
+          </div>
+
+          <div className="my-3 ">
             <Link className="text-decoration-none bgcolor" to="/login">
-              <h3>
-                <img className="mx-2 mb-2 w-23px" src={Team} alt="userIcon" />
-                <span className="text-muted underlineAnimation FiraSansRegular">
-                  Account
-                </span>
-              </h3>
+              <h3 className="text-muted">Account</h3>
             </Link>
           </div>
+
           <Dropdown
             onClick={() => {
               this.caretAnimation();
@@ -116,9 +94,8 @@ class Sidebar extends Component {
                 variant="none"
                 id="dropdown-basic"
               >
-                <h3>
-                  <BiCategory className="me-3 mb-2 color f25" />
-                  <span className="text-muted FiraSansRegular">Category</span>
+                <h3 className="text-muted">
+                  <span className="text-muted">Category</span>
                   {caretButtonAnimation && canvasOpen ? (
                     <img
                       className="mx-2 dropdownCaretUp f20"
@@ -135,7 +112,7 @@ class Sidebar extends Component {
                 </h3>
               </Dropdown.Toggle>
 
-              <Dropdown.Menu className="categoryDropdownMenu bg-light FiraSansLight">
+              <Dropdown.Menu className="categoryDropdownMenu bg-light AvenirRegular">
                 <ul>
                   <li>
                     <Link to="/" className="textDecorationNone bg-light f20">

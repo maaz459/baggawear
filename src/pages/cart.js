@@ -44,49 +44,47 @@ class cart extends Component {
       <div>
         <TopBar />
         <SecondaryNavbar />
-        <Container fluid="lg" className="pb-5 pt-3">
+        <Container fluid="lg" className="pb-5 pt-3 AvenirRegular">
           <div className="pb-4 mx-2">
             <h1 className="FiraSansSemiBold">Shopping Cart</h1>
-            <small className="text-uppercase">
+            <small className="text-uppercase AvenirBold">
               There Are
-              <span className="color RobotoSemiBold"> 3 products</span> in your
-              cart
+              <span className="color AvenirBold"> 3 products</span> in your cart
             </small>
           </div>
           <Row className="flex-column-reverse flex-lg-row">
             <Col lg={8} md={12} sm={12}>
               <div className="d-none mt-md-5 d-md-flex">
-                <p className="ms-2 f15 mb-0 w-50 RobotoBold productHeading">
+                <p className="ms-2 f15 mb-0 w-50 AvenirBold productHeading">
                   Products
                 </p>
-                <p className=" mb-0 f15 RobotoBold"> Amount </p>
-                &nbsp; <p className="mb-0 f15 ms-4 RobotoBold"> Quantity </p>
-                <p className="mb-0 f15 ms-5 RobotoBold"> Total </p>
+                <p className=" mb-0 f15 AvenirBold"> Amount </p>
+                &nbsp; <p className="mb-0 f15 ms-4 AvenirBold"> Quantity </p>
+                <p className="mb-0 f15 ms-4 AvenirBold"> Total </p>
               </div>
               <hr className="mx-2" />
               <div className="d-md-flex my-3 ms-2">
                 <div className="d-flex productinfoDiv w-50">
                   <img src={Img1} alt="product1 " className="cartProductImg" />
                   <div className="mx-2 RobotoRegular w-100">
-                    <p className="my-auto RobotoBold f15 productCardName">
-                      Product Name
+                    <p className="my-auto AvenirBold f12">
+                      sdkjasdhksjad ddsadas ssds sdsd sdsd sdsdsd
                     </p>
-                    <small className="RobotoLight f12">Product category</small>
-                    <br />{' '}
-                    <small className="RobotoLight f12">Product size</small>
+                    <small className="AvenirLight">Product category</small>
+                    <br /> <small className="AvenirLight">Product size</small>
                   </div>
                 </div>
                 <div className="d-flex justify-content-evenly flex-column flex-sm-row ms-4 ms-sm-0">
                   <div className="text-left text-sm-center my-2 my-sm-auto ">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Price :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
 
                   <div className="my-3 my-sm-auto">
                     <div className="text-left text-sm-center">
-                      <small className="RobotoBold d-md-none f18">Qty :</small>
+                      <small className="AvenirBold d-md-none f18">Qty :</small>
                       <div className="d-flex justify-content-left  my-auto mx-sm-5">
                         <p className="my-auto f15">{quantity}</p>
                         <div className=" ms-2">
@@ -114,10 +112,10 @@ class cart extends Component {
                     </div>
                   </div>
                   <div className="text-left text-sm-center my-2 my-sm-auto">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Subtotal :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
                   <div className="d-flex ms-sm-5 my-2 my-sm-auto">
                     <Link to="/" className="my-auto">
@@ -142,24 +140,24 @@ class cart extends Component {
                 <div className="d-flex productinfoDiv w-50">
                   <img src={Img1} alt="product1 " className="cartProductImg" />
                   <div className="mx-2 RobotoRegular w-100">
-                    <p className="my-auto RobotoBold f12">
+                    <p className="my-auto AvenirBold f12">
                       sdkjasdhksjad ddsadas ssds sdsd sdsd sdsdsd
                     </p>
-                    <small className="RobotoLight">Product category</small>
-                    <br /> <small className="RobotoLight">Product size</small>
+                    <small className="AvenirLight">Product category</small>
+                    <br /> <small className="AvenirLight">Product size</small>
                   </div>
                 </div>
                 <div className="d-flex justify-content-evenly flex-column flex-sm-row ms-4 ms-sm-0">
                   <div className="text-left text-sm-center my-2 my-sm-auto ">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Price :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
 
                   <div className="my-3 my-sm-auto">
                     <div className="text-left text-sm-center">
-                      <small className="RobotoBold d-md-none f18">Qty :</small>
+                      <small className="AvenirBold d-md-none f18">Qty :</small>
                       <div className="d-flex justify-content-left  my-auto mx-sm-5">
                         <p className="my-auto f15">{quantity}</p>
                         <div className=" ms-2">
@@ -187,10 +185,10 @@ class cart extends Component {
                     </div>
                   </div>
                   <div className="text-left text-sm-center my-2 my-sm-auto">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Subtotal :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
                   <div className="d-flex ms-sm-5 my-2 my-sm-auto">
                     <Link to="/" className="my-auto">
@@ -215,24 +213,24 @@ class cart extends Component {
                 <div className="d-flex productinfoDiv w-50">
                   <img src={Img1} alt="product1 " className="cartProductImg" />
                   <div className="mx-2 RobotoRegular w-100">
-                    <p className="my-auto RobotoBold f12">
+                    <p className="my-auto AvenirBold f12">
                       sdkjasdhksjad ddsadas ssds sdsd sdsd sdsdsd
                     </p>
-                    <small className="RobotoLight">Product category</small>
-                    <br /> <small className="RobotoLight">Product size</small>
+                    <small className="AvenirLight">Product category</small>
+                    <br /> <small className="AvenirLight">Product size</small>
                   </div>
                 </div>
                 <div className="d-flex justify-content-evenly flex-column flex-sm-row ms-4 ms-sm-0">
                   <div className="text-left text-sm-center my-2 my-sm-auto ">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Price :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
 
                   <div className="my-3 my-sm-auto">
                     <div className="text-left text-sm-center">
-                      <small className="RobotoBold d-md-none f18">Qty :</small>
+                      <small className="AvenirBold d-md-none f18">Qty :</small>
                       <div className="d-flex justify-content-left  my-auto mx-sm-5">
                         <p className="my-auto f15">{quantity}</p>
                         <div className=" ms-2">
@@ -260,10 +258,10 @@ class cart extends Component {
                     </div>
                   </div>
                   <div className="text-left text-sm-center my-2 my-sm-auto">
-                    <small className="displayBlock d-md-none RobotoBold f18">
+                    <small className="displayBlock d-md-none AvenirBold f18">
                       Subtotal :
                     </small>
-                    <small className="my-auto RobotoRegular f15">230000</small>
+                    <small className="my-auto RobotoRegular f15">RS 000</small>
                   </div>
                   <div className="d-flex ms-sm-5 my-2 my-sm-auto">
                     <Link to="/" className="my-auto">
@@ -292,7 +290,7 @@ class cart extends Component {
         </Container>
         <Container>
           <Row>
-            <Col lg={8} md={12}>
+            <Col lg={8} md={12} className="AvenirRegular">
               <Button variant="light">
                 <Link to="/" className="p-2">
                   <img
@@ -304,10 +302,10 @@ class cart extends Component {
                 </Link>
               </Button>
             </Col>
-            <Col lg={4} md={12} className="py-5">
+            <Col lg={4} md={12} className="py-5 AvenirRegular">
               <Card className="p-3 voucherCard">
-                <h3>Apply Coupon</h3>
-                <h6>Using a promo code ?</h6>
+                <h3 className="FiraSansSemiBold">Apply Coupon</h3>
+                <h6 className="AvenirRegular">Using a promo code ?</h6>
                 <Form.Control
                   placeholder="Enter Coupon Number"
                   className="mt-2"
