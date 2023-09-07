@@ -10,19 +10,19 @@ body {
 
 @font-face {
   font-family: 'FiraSans-Light';
-  src: url('./Assests/fonts/FiraSans-Light.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Light.ttf');
 }
 @font-face {
   font-family: 'FiraSans-Regular';
-  src: url('./Assests/fonts/FiraSans-Regular.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Regular.ttf');
 }
 @font-face {
   font-family: 'FiraSans-SemiBold';
-  src: url('./Assests/fonts/FiraSans-SemiBold.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-SemiBold.ttf');
 }
 @font-face {
   font-family: 'FiraSans-Bold';
-  src: url('./Assests/fonts/FiraSans-Bold.ttf');
+  src: url('./Assests/fonts/FirsSans/FiraSans-Bold.ttf');
 }
 .FiraSansLight {
   font-family: FiraSans-Light !important;
@@ -35,4 +35,49 @@ body {
 }
 .FiraSansBold {
   font-family: FiraSans-Bold !important;
+}
+
+
+@font-face {
+  font-family: 'Gordita-Light';
+  src: url('./Assests/fonts/Gordita/Gordita-Light.otf');
+}
+@font-face {
+  font-family: 'Gordita-Regular';
+  src: url('./Assests/fonts/Gordita/Gordita-Regular.otf');
+}
+@font-face {
+  font-family: 'Gordita-Bold';
+  src: url('./Assests/fonts/Gordita/Gordita-Bold.otf');
+}
+.GorditaLight {
+  font-family: Gordita-Light !important;
+}
+.GorditaRegular {
+  font-family: Gordita-Regular !important;
+}
+.GorditaBold {
+  font-family: Gordita-Bold !important;
+}
+
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-It.otf');
+}
+@font-face {
+  font-family: 'Avenir-Regular';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-Regular.otf');
+}
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url('./Assests/fonts/Avenir/AvenirNextLTPro-Bold.otf');
+}
+.AvenirLight {
+  font-family: Avenir-Light !important;
+}
+.AvenirRegular {
+  font-family: Avenir-Regular !important;
+}
+.AvenirBold {
+  font-family: Avenir-Bold !important;
 }

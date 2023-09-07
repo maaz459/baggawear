@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import TopBar from '../components/shared/navbar';
 import SecondaryNavbar from '../components/shared/secondaryNavbar';
-import PosterCarousel from '../components/shared/posterCarousel';
-import CategoryCarousel from '../components/shared/categoryCarousel';
-import ProductsCards from '../components/shared/productCards';
-import SecondaryFooter from '../components/shared/secondaryfooter';
+import PosterCarousel from '../components/pages/posterCarousel';
+import CategoryCarousel from '../components/pages/categoryCarousel';
+import ProductsCards from '../components/pages/productsCard';
+import SecondaryFooter from '../components/shared/secondaryFooter';
 import Footer from '../components/shared/footer';
-import SmallFooter from '../components/shared/smallFotter';
+import HotPromotions from '../components/pages/hotPromotion';
+import SmallFooter from '../components/shared/smallFooter';
+import CardSlider from '../components/pages/cardSlider';
+import TopProducts from '../components/pages/topProducts';
+import SmallCards from '../components/pages/smallCards';
 
 class Home extends Component {
   render() {
@@ -16,7 +20,12 @@ class Home extends Component {
         <SecondaryNavbar />
         <PosterCarousel />
         <CategoryCarousel />
+        <SmallCards />
         <ProductsCards />
+        <CardSlider />
+        <HotPromotions />
+        <SmallCards />
+        <TopProducts />
         <SecondaryFooter />
         <Footer />
         <SmallFooter />
