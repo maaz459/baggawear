@@ -106,7 +106,7 @@ class Footer extends Component {
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
-                to="/"
+                to="/contactus"
               >
                 Contact
               </Link>

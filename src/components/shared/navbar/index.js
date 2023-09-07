@@ -133,7 +133,7 @@ class TopBar extends Component {
             </Nav>
           </Container>
         </Navbar>
-        <hr className="mx-3 text-muted" />
+        <hr className="text-muted mb-0" />
       </div>
     );
   }

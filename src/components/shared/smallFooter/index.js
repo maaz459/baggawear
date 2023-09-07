@@ -112,7 +112,7 @@ class SmallFooter extends Component {
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone"
-                to="/"
+                to="/contactus"
               >
                 Contact
               </Link>

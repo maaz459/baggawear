@@ -479,24 +479,7 @@
 .dropdownBtn:hover {
   color: whitesmoke;
 }
-/* .hr {
-  border: 0;
-  height: 30px;
-  border-style: solid;
-  border-color: #333;
-  border-width: 1px 0 0 0;
-  border-radius: 20px;
-}
-.hr:before {
-  display: block;
-  content: '';
-  height: 30px;
-  margin-top: -31px;
-  border-style: solid;
-  border-color: #333;
-  border-width: 0 0 1px 0;
-  border-radius: 20px;
-} */
+
 .socialMediaIcon:hover {
   color: #22c77c !important;
 }
@@ -1055,47 +1038,38 @@
 }
 
 /* <-----contactus-------> */
-.contactusText {
-  margin: 0px 0px;
-  text-align: center;
-  font-size: 50px;
-  background: linear-gradient(
-    225deg,
-    orange,
-    yellow,
-    #22c77c,
-    rgba(96, 96, 245, 0.959) /* blue, */ /* indigo, */
-  );
-  background-size: 200% auto;
-  color: #000;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: shine 8s linear infinite;
+.contactUs .innerDiv {
+  margin-left: 100px;
 }
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+.contactUs .bgImg {
+  background-image: url('./Assests/imgs/backgroundImg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contactUs .num1 {
+  color: #a5d7f5;
+}
+.contactUs .num2 {
+  color: #f85286;
+}
+.contactUs .num3 {
+  color: #f59758;
 }
 .contactFormDiv {
-  width: 60%;
+  width: 75%;
+  margin: 70px auto;
 }
-
-.sendMesage {
-  float: right;
+.contactUs .map {
+  width: 80%;
 }
 .sendMesage:focus {
   box-shadow: none;
 }
-
 .contactusInput:focus {
   border-color: lightgray;
 }
 .contactusInput {
-  resize: none;
+  resize: none !important;
   -moz-appearance: textfield !important;
 }
 .contactusInput::-webkit-outer-spin-button,
@@ -1110,7 +1084,12 @@
   width: 50%;
   padding-left: 10px;
 }
-
+@media screen and (max-width: 1200px) {
+  .contactUs .map {
+    width: 100% !important;
+    background-color: #a5d7f5 !important;
+  }
+}
 @media screen and (max-width: 680px) {
   .contactFormDiv {
     width: 80% !important;

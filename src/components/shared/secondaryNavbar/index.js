@@ -66,8 +66,8 @@ class SecondaryNavbar extends Component {
     return (
       <div className="d-none d-md-block FiraSansRegular">
         <div className="container-fluid  g-0 ">
-          <div className="row mx-1">
-            <div className="col-12  col-lg-8 ">
+          <div className="row mx-1 mt-3">
+            <div className="col-12 col-lg-8 ">
               <Dropdown
                 className="displayInline"
                 onClick={() => {
@@ -226,7 +226,7 @@ class SecondaryNavbar extends Component {
                 </Link>
                 <Link
                   className="socialMediaIcon ms-2 f16 textDecorationNone d-md-inline d-none"
-                  to="/"
+                  to="/contactus"
                 >
                   Contact
                 </Link>
@@ -272,7 +272,7 @@ class SecondaryNavbar extends Component {
             </div>
           </div>
         </div>
-        <hr className=" hr" />
+        <hr className="mb-0" />
       </div>
     );
   }

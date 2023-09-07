@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { IoHomeOutline, IoLocationOutline } from 'react-icons/io5';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Whatsapp from '../Assests/imgs/whatsapp.png';
-import Youtube from '../Assests/imgs/youtube.png';
-import Instagram from '../Assests/imgs/instagram.png';
-import Facebook from '../Assests/imgs/icons8-facebook-48.png';
+import { PiCaretRight } from 'react-icons/pi';
+import { LuPhoneCall } from 'react-icons/lu';
+import { CiMail } from 'react-icons/ci';
+import {
+  MdOutlineCheckBoxOutlineBlank,
+  MdOutlineCheckBox,
+} from 'react-icons/md';
 import Topbar from '../components/shared/navbar';
 import SecondaryNavbar from '../components/shared/secondaryNavbar';
 import Footer from '../components/shared/footer';
@@ -17,132 +22,200 @@ import SecondaryFooter from '../components/shared/secondaryFooter';
 class ContactUS extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { checked: false };
   }
 
   render() {
+    const { checked } = this.state;
     return (
-      <div>
+      <div className="contactUs AvenirRegular">
         <Topbar />
         <SecondaryNavbar />
-        <Container>
-          <Row>
-            <div className="text-center">
-              <h1 className="contactusText FiraSansRegular">CONTACT US</h1>
-              <p className="AvenirRegular">
-                We&apos;re thrilled to connect with you! Please feel free to
-                reach out to us using any of the methods below. Your questions,
-                feedback, and inquiries are always welcome.
+        <div className="py-5 bgImg">
+          <div className="py-3 innerDiv AvenirRegular">
+            <h1 className="FiraSansRegular">Contact Us</h1>
+            <Link to="/">
+              <p className="color displayInline">
+                <IoHomeOutline className="mb-1 me-2" /> Home
               </p>
-              <h3 className="mt-4 FiraSansRegular">Customer Support</h3>
-              <p className="AvenirRegular">
-                Our dedicated support team is available to assist you on
-                weekdays from [Opening Hours]. You can contact us by phone at
-                [Phone Number] or via email at support@example.com. We&apos;re
-                here to make sure you have the best experience possible.
-              </p>
-              <h3 className="FiraSansRegular">Visit Us</h3>
-              <p className="AvenirRegular">
-                If you prefer a face-to-face conversation, you can find us at
-                our office located at: [Your Office Address]
-              </p>
-              <h3 className="FiraSansRegular">Connect on Social Media</h3>
-              <p className="AvenirRegular">
-                Stay updated with our latest news, promotions, and more through
-                our social media channels. Connect with us on:
-              </p>
-              <div>
-                <Link to="/">
-                  <img
-                    className="w-35px mx-2"
-                    src={Facebook}
-                    alt="FacebookIcon"
-                  />
-                </Link>
-                <Link to="/">
-                  <img
-                    className="w-28px mx-2"
-                    src={Whatsapp}
-                    alt="whatsappIcon"
-                  />
-                </Link>
-                <Link to="/">
-                  <img
-                    className="w-28px mx-2"
-                    src={Youtube}
-                    alt="youtubeIcon"
-                  />
-                </Link>
-                <Link to="/">
-                  <img
-                    className="w-28px mx-2"
-                    src={Instagram}
-                    alt="instagramIcon"
-                  />
-                </Link>
-              </div>
-            </div>
-          </Row>
-        </Container>
-        <div className="container my-5 contactFormDiv">
-          <h3 className="color FiraSansRegular">Drop Us a Line</h3>
-          <p className="AvenirRegular">
-            We appreciate your interest in [Your Company Name]. Have a question
-            or feedback? Feel free to drop us a message using the contact form
-            below. We&apos;ll get back to you as soon as we can.
-          </p>
-          <Form>
-            <Form.Group controlId="name">
-              <Form.Control
-                autoComplete="off"
-                className="contactusInput AvenirRegular outlineNone"
-                type="text"
-                name="name"
-                placeholder="Write your Name Here"
-              />
-            </Form.Group>
-
-            <div className="d-sm-flex ">
-              <Form.Group className="passwordGroup" controlId="email">
-                <Form.Control
-                  autoComplete="off"
-                  className="contactusInput AvenirRegular outlineNone my-3"
-                  type="number"
-                  placeholder="Phone Number"
-                />
-              </Form.Group>
-              <Form.Group className="emailGroup" controlId="email">
-                <Form.Control
-                  autoComplete="off"
-                  className="contactusInput AvenirRegular outlineNone my-3"
-                  type="email"
-                  placeholder="Email Address"
-                />
-              </Form.Group>
-            </div>
-
-            <Form.Group controlId="message">
-              <Form.Control
-                autoComplete="off"
-                className="contactusInput AvenirRegular outlineNone"
-                as="textarea"
-                rows={10}
-                pattern="[0-9]*"
-                maxLength={11}
-                name="message"
-                placeholder="Write Your Message Here"
-              />
-            </Form.Group>
-
-            <Button
-              variant="none"
-              className="FiraSansRegular bgcolor my-3 px-3 text-light sendMesage"
-              type="submit"
-            >
-              Send Message
-            </Button>
-          </Form>
+            </Link>
+            <p className="displayInline">
+              <PiCaretRight className="ms-1" /> Contat Us
+            </p>
+          </div>
         </div>
+        <Container className="mt-5">
+          <Row className="justify-content-center mx-2">
+            <h2 className="text-center">Let us know</h2>
+            <h2 className="text-center color">How We Can Help You</h2>
+            <Col md="4" xl="3" className="mt-4">
+              <p className="f20 AvenirBold num1">01.</p>
+              <h4 className="FiraSansSemiBold">Visit Feedback</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur incidunt perspiciatis accusamus molestias, commodi
+                ullam natus autem maiores fuga, officiis distinctio? Qui.
+              </p>
+            </Col>
+            <Col md="4" xl="3" className="mt-4">
+              <p className="f20 AvenirBold num2">02.</p>
+              <h4 className="FiraSansSemiBold">Employer Services</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur incidunt perspiciatis accusamus molestias, commodi
+                ullam natus autem maiores fuga, officiis distinctio? Qui.
+              </p>
+            </Col>
+            <Col md="4" xl="3" className="mt-4">
+              <p className="f20 AvenirBold num3">03.</p>
+              <h4 className="FiraSansSemiBold">Biling Inquiries</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur incidunt perspiciatis accusamus molestias, commodi
+                ullam natus autem maiores fuga, officiis distinctio? Qui.
+              </p>
+            </Col>
+            <div className="my-4 mx-auto text-center map bgcolor">MAP HERE</div>
+          </Row>
+          <Row className="justify-content-center">
+            <Col md="4" xl="3" className="mt-4">
+              <h4 className="FiraSansSemiBold">Office</h4>
+              <p className="mb-0">
+                <LuPhoneCall className="mb-1 me-2" size={18} color="#22c77c" />
+                +000 000 000
+              </p>
+              <p className="mb-0">
+                <IoLocationOutline
+                  className="mb-1 me-2"
+                  size={20}
+                  color="#22c77c"
+                />
+                Lorem ipsum dolor sit amet.
+              </p>
+              <p className="mb-0">
+                <CiMail className="mb-1 me-2" size={19} color="#22c77c" />
+                example@gmail.com
+              </p>
+            </Col>
+            <Col md="4" xl="3" className="mt-4">
+              <h4 className="FiraSansSemiBold">Studio</h4>
+              <p className="mb-0">
+                <LuPhoneCall className="mb-1 me-2" size={18} color="#22c77c" />
+                +000 000 000
+              </p>
+              <p className="mb-0">
+                <IoLocationOutline
+                  className="mb-1 me-2"
+                  size={20}
+                  color="#22c77c"
+                />
+                Lorem ipsum dolor sit amet
+              </p>
+              <p className="mb-0">
+                <CiMail className="mb-1 me-2" size={19} color="#22c77c" />
+                example@gmail.com
+              </p>
+            </Col>
+            <Col md="4" xl="3" className="mt-4">
+              <h4 className="FiraSansSemiBold">Shop</h4>
+              <p className="mb-0">
+                <LuPhoneCall className="mb-1 me-2" size={18} color="#22c77c" />
+                +000 000 000
+              </p>
+              <p className="mb-0">
+                <IoLocationOutline
+                  className="mb-1 me-2"
+                  size={20}
+                  color="#22c77c"
+                />
+                Lorem ipsum dolor sit amet
+              </p>
+              <p className="mb-0">
+                <CiMail className="mb-1 me-2" size={19} color="#22c77c" />
+                example@gmail.com
+              </p>
+            </Col>
+          </Row>
+          <div className="AvenirRegular contactFormDiv">
+            <h3 className="FiraSansSemiBold">Drop Us a Line</h3>
+            <p>Your email address will not be published.</p>
+            <Form>
+              <Form.Group controlId="name">
+                <Form.Control
+                  required="true"
+                  autoComplete="off"
+                  className="contactusInput AvenirRegular outlineNone"
+                  type="text"
+                  name="name"
+                  placeholder="Write your Name Here"
+                />
+              </Form.Group>
+
+              <div className="d-sm-flex ">
+                <Form.Group className="passwordGroup" controlId="phoneNumber">
+                  <Form.Control
+                    required="true"
+                    autoComplete="off"
+                    className="contactusInput AvenirRegular outlineNone my-3"
+                    type="number"
+                    placeholder="Phone Number"
+                  />
+                </Form.Group>
+                <Form.Group className="emailGroup" controlId="email">
+                  <Form.Control
+                    required="true"
+                    autoComplete="off"
+                    className="contactusInput AvenirRegular outlineNone my-3"
+                    type="email"
+                    placeholder="Email Address"
+                  />
+                </Form.Group>
+              </div>
+
+              <Form.Group controlId="message">
+                <Form.Control
+                  required="true"
+                  autoComplete="off"
+                  className="contactusInput AvenirRegular outlineNone"
+                  as="textarea"
+                  rows={10}
+                  name="message"
+                  placeholder="Write Your Message Here"
+                />
+              </Form.Group>
+              <div>
+                <div className="pointer displayInline">
+                  {checked ? (
+                    <MdOutlineCheckBox
+                      size={18}
+                      color="#22c77c"
+                      className="mb-1 me-2"
+                      onClick={() => this.setState({ checked: false })}
+                    />
+                  ) : (
+                    <MdOutlineCheckBoxOutlineBlank
+                      size={18}
+                      color="#22c77c"
+                      className="mb-1 me-2"
+                      onClick={() => this.setState({ checked: true })}
+                    />
+                  )}
+                </div>
+
+                <small className="ms-3">
+                  Save my name,email and website in this browser
+                </small>
+              </div>
+              <Button
+                variant="none"
+                className="bgcolor my-2 px-3 text-light sendMesage"
+                type="submit"
+              >
+                Send Message
+              </Button>
+            </Form>
+          </div>
+        </Container>
         <SecondaryFooter />
         <Footer />
         <SmallFooter />
