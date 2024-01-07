@@ -18,9 +18,9 @@ class RatingStar extends Component {
       return (
         <span key={index}>
           {star >= index + 1 ? (
-            <FaStar size={15} color="fdc040" />
+            <FaStar size={15} color="#fdc040" />
           ) : star >= number ? (
-            <FaStarHalfAlt size={15} color="fdc040" />
+            <FaStarHalfAlt size={15} color="#fdc040" />
           ) : (
             <FaStar size={15} color="#939393" />
           )}
