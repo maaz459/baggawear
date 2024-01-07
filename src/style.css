@@ -472,7 +472,7 @@
 
 /* <------Secondary Navbar---------> */
 .dropdownBtn {
-  padding: 7px 15px;
+  padding: 7px 12px;
   border-radius: 10px;
   color: whitesmoke;
 }
@@ -803,7 +803,7 @@
   border: 2px solid #f5f5f5;
   border-radius: 20px;
   margin: auto auto;
-  width: fit-content;
+  width: 80vh;
   height: fit-content;
   color: #f5f5f5;
 }
@@ -838,6 +838,7 @@
   border: 2px solid #22c77c;
 }
 .signUpInput {
+  height: 33px;
   background-color: transparent;
   border: 2px solid #22c77c;
   color: #fff;
@@ -854,6 +855,7 @@
   background-color: transparent;
   border: 2px solid #22c77c;
   color: #fff;
+  height: 33px;
   padding: 6px 30px 6px 10px;
 }
 .loginPassword:focus {
@@ -862,6 +864,12 @@
   border: 2px solid #22c77c;
   outline: none;
   box-shadow: none;
+}
+.errorMessage {
+  font-size: 12px;
+}
+.signupFormLable {
+  font-size: 15px;
 }
 
 .forgetButton {
@@ -925,6 +933,7 @@
     height: 85%;
   }
   .signUpCard {
+    width: 100%;
     border: none;
   }
 }
@@ -1011,32 +1020,116 @@
   }
 }
 /* <------aboutus------> */
-
-.aboutustext {
-  text-align: center;
-  font-size: 50px;
-  background: linear-gradient(
-    225deg,
-    orange,
-    yellow,
-    #22c77c,
-    rgba(96, 96, 245, 0.959)
-  );
-  background-size: 200% auto;
-  color: #000;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: shine 8s linear infinite;
+.aboutus .innerDiv {
+  margin-left: 100px;
 }
-@keyframes shine {
-  to {
-    background-position: 200% center;
+.aboutus .bgImg {
+  background-image: url('./Assests/imgs/backgroundImg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutus .mainCard {
+  width: 90%;
+  margin: 0px auto;
+  height: 100%;
+}
+.aboutus .mainCard:hover .image {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.aboutus .mainCard:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.aboutus .cardButton {
+  background-color: #d4eee2;
+}
+.aboutus .cardText {
+  height: 100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: inherit;
+}
+.aboutus .cardButton:hover {
+  color: #22c77c;
+}
+.aboutus .image {
+  position: relative;
+  bottom: 38px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  width: 75px;
+  border-radius: 50%;
+}
+.aboutus .carousel .carousel-indicators button {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.aboutus .carousel-indicators .active {
+  background-color: #f1f1f1 !important;
+}
+.aboutus .leftText {
+  height: 280px;
+  overflow-y: hidden !important;
+}
+.aboutus .carouselItem {
+  width: 90%;
+  height: 550px;
+}
+.aboutus .sliderItem {
+  height: 160px;
+}
+.aboutus .sliderItem:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.aboutus .info1 {
+  /* border-left: 2px solid #9999; */
+}
+.aboutus .info2 {
+  border-left: 2px solid #9999;
+}
+.aboutus .info3 {
+  border-left: 2px solid #9999;
+}
+.aboutus .info4 {
+  border-left: 2px solid #9999;
+}
+@media screen and (min-width: 992px) {
+  .aboutus .cardText {
+    height: 100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: inherit;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .aboutus .info4 {
+    border-left: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .aboutus .info3 {
+    border-left: none;
+  }
+  .aboutus .info4 {
+    border-left: 2px solid #9999;
+  }
+}
+@media screen and (max-width: 315px) {
+  .aboutus .info3 {
+    background-color: #22c77c;
+    border-left: none;
+    width: 100%;
+  }
+  .aboutus .info4 {
+    border-left: 2px solid #9999;
+  }
+}
 /* <-----contactus-------> */
 .contactUs .innerDiv {
   margin-left: 100px;
@@ -1166,6 +1259,10 @@
     width: 100% !important;
   }
 }
-/* <----small cards-----> */
-.smlCardBg {
+/* <----get rating-----> */
+.starRating {
+  transition: color 200ms;
+}
+.reviewImage {
+  width: 50px;
 }

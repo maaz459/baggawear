@@ -84,7 +84,7 @@ class SmallFooter extends Component {
             <Accordion.Body className="bg-white">
               <Link
                 className="f15 underlineAnimation textDecorationNone"
-                to="/"
+                to="/aboutus"
               >
                 About Us
               </Link>
@@ -93,7 +93,7 @@ class SmallFooter extends Component {
                 className="f15 underlineAnimation textDecorationNone"
                 to="/contactus"
               >
-                SERVICES
+                Services
               </Link>
               <br />
               <Link
@@ -130,21 +130,21 @@ class SmallFooter extends Component {
                 className="f15 underlineAnimation textDecorationNone"
                 to="/"
               >
-                SIGN IN
+                Sign In
               </Link>
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone"
                 to="/"
               >
-                VIEW CART
+                View Cart
               </Link>
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone"
                 to="/cart"
               >
-                MY WISHLIST
+                My Wishlist
               </Link>
               <br />
               <Link

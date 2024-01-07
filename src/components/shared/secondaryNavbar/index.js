@@ -65,11 +65,11 @@ class SecondaryNavbar extends Component {
 
     return (
       <div className="d-none d-md-block FiraSansRegular">
-        <div className="container-fluid  g-0 ">
+        <div className="container-fluid">
           <div className="row mx-1 mt-3">
             <div className="col-12 col-lg-8 ">
               <Dropdown
-                className="displayInline"
+                className="displayInline me-1"
                 onClick={() => {
                   this.categoryCaretAnimation();
                 }}
@@ -78,16 +78,16 @@ class SecondaryNavbar extends Component {
                 }}
               >
                 <Dropdown.Toggle
-                  className="bgcolor ms-1   dropdownBtn"
+                  className="bgcolor dropdownBtn"
                   variant="white"
                   id="dropdown-basic"
                 >
-                  <TbGridDots className="mb-1 f18 me-1" />
-                  <span>Browse All Categories</span>
+                  <TbGridDots className="mb-1 f18" />
+                  <span className="mx-1">Browse All Categories</span>
                   {categoryCaretAnimation ? (
-                    <PiCaretDownBold className="ms-1 dropdownCaretUp f18" />
+                    <PiCaretDownBold className="dropdownCaretUp f18" />
                   ) : (
-                    <PiCaretDownBold className="ms-1 dropdownCaretDown f18" />
+                    <PiCaretDownBold className="dropdownCaretDown f18" />
                   )}
                 </Dropdown.Toggle>
 
@@ -103,8 +103,8 @@ class SecondaryNavbar extends Component {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <div className="displayInline ms-xl-5 pt-2">
-                <Link className="f16" to="/">
+              <div className="displayInline  ms-xl-2 pt-2">
+                <Link className="f16 mx-sm-1 mx-xl-2" to="/">
                   <Dropdown
                     className="displayInline"
                     onClick={() => {
@@ -141,12 +141,12 @@ class SecondaryNavbar extends Component {
                   </Dropdown>
                 </Link>
                 <Link
-                  className="socialMediaIcon ms-2 f16 d-md-inline d-none textDecorationNone"
-                  to="/"
+                  className="socialMediaIcon mx-sm-1 mx-xl-2 f16 d-md-inline d-none textDecorationNone"
+                  to="/aboutus"
                 >
                   About
                 </Link>
-                <Link className="f16 ms-2" to="/">
+                <Link className="f16 mx-sm-1 mx-xl-2" to="/">
                   <Dropdown
                     className="displayInline"
                     onClick={() => {
@@ -182,7 +182,7 @@ class SecondaryNavbar extends Component {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Link>
-                <Link className="f16 ms-2" to="/">
+                <Link className="f16 mx-sm-1 mx-xl-2" to="/">
                   <Dropdown
                     className="displayInline m-0 p-0"
                     onClick={() => {
@@ -219,13 +219,13 @@ class SecondaryNavbar extends Component {
                   </Dropdown>
                 </Link>
                 <Link
-                  className="socialMediaIcon f16 ms-2  d-md-inline d-none textDecorationNone "
+                  className="socialMediaIcon f16 mx-sm-1 mx-xl-2 d-md-inline d-none textDecorationNone "
                   to="/"
                 >
                   Our Team
                 </Link>
                 <Link
-                  className="socialMediaIcon ms-2 f16 textDecorationNone d-md-inline d-none"
+                  className="socialMediaIcon mx-sm-1 mx-xl-2 f16 textDecorationNone d-md-inline d-none"
                   to="/contactus"
                 >
                   Contact
@@ -234,38 +234,38 @@ class SecondaryNavbar extends Component {
             </div>
             <div className="col-4 d-none d-lg-flex justify-content-end align-items-center">
               <Link
-                className="f23 socialMediaIcon textDecorationNone mb-1"
+                className="socialMediaIcon textDecorationNone mb-1"
                 to="https://www.facebook.com/"
               >
-                <RiFacebookCircleLine />
+                <RiFacebookCircleLine size={22} />
               </Link>
               <Link
-                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                className="ms-1 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.instagram.com/accounts/login/"
               >
-                <FiTwitter />
+                <FiTwitter size={20} />
               </Link>
               <Link
-                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                className="ms-1 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.instagram.com/accounts/login/"
               >
-                <FiInstagram />
+                <FiInstagram size={20} />
               </Link>
               <Link
-                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                className="ms-1 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.youtube.com"
               >
-                <FiYoutube />
+                <FiYoutube size={20} />
               </Link>
               <Link
-                className="mx-1 f20 socialMediaIcon textDecorationNone mb-1"
+                className="ms-1 socialMediaIcon textDecorationNone mb-1"
                 to="https://www.youtube.com"
               >
-                <FaWhatsapp />
+                <FaWhatsapp size={20} />
               </Link>
-              <span className="mx-1 mb-1 f25 text-muted">|</span>
-              <LuPhoneCall className="f20 mb-0 socialMediaIcon" />
-              <p className="f12 displayInline AvenirLight ms-2 mb-0 pb-0">
+              <span className="mb-1 f25 text-muted">|</span>
+              <LuPhoneCall size={20} className="mb-0 socialMediaIcon" />
+              <p className="f12 displayInline AvenirLight ms-1 mb-0 pb-0">
                 <span>000 000 000 000</span>{' '}
                 <span className="text-muted displayBlock">timing</span>{' '}
               </p>
