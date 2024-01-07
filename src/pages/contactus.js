@@ -142,7 +142,7 @@ class ContactUS extends Component {
             <Form>
               <Form.Group controlId="name">
                 <Form.Control
-                  required="true"
+                  required
                   autoComplete="off"
                   className="contactusInput AvenirRegular outlineNone"
                   type="text"
@@ -154,7 +154,7 @@ class ContactUS extends Component {
               <div className="d-sm-flex ">
                 <Form.Group className="passwordGroup" controlId="phoneNumber">
                   <Form.Control
-                    required="true"
+                    required
                     autoComplete="off"
                     className="contactusInput AvenirRegular outlineNone my-3"
                     type="number"
@@ -163,7 +163,7 @@ class ContactUS extends Component {
                 </Form.Group>
                 <Form.Group className="emailGroup" controlId="email">
                   <Form.Control
-                    required="true"
+                    required
                     autoComplete="off"
                     className="contactusInput AvenirRegular outlineNone my-3"
                     type="email"
@@ -174,7 +174,7 @@ class ContactUS extends Component {
 
               <Form.Group controlId="message">
                 <Form.Control
-                  required="true"
+                  required
                   autoComplete="off"
                   className="contactusInput AvenirRegular outlineNone"
                   as="textarea"
@@ -183,7 +183,7 @@ class ContactUS extends Component {
                   placeholder="Write Your Message Here"
                 />
               </Form.Group>
-              <div>
+              <div className="my-2">
                 <div className="pointer displayInline">
                   {checked ? (
                     <MdOutlineCheckBox

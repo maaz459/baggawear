@@ -78,7 +78,7 @@ class Footer extends Component {
               <h5 className="FiraSansSemiBold">Company</h5>
               <Link
                 className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
-                to="/"
+                to="/aboutus"
               >
                 About Us
               </Link>
@@ -119,21 +119,21 @@ class Footer extends Component {
                 className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                SIGN IN
+                Sign In
               </Link>
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/cart"
               >
-                VIEW CART
+                View Cart
               </Link>
               <br />
               <Link
                 className="f15 underlineAnimation textDecorationNone text-muted AvenirRegular"
                 to="/"
               >
-                MY WISHLIST
+                My Wishlist
               </Link>
               <br />
               <Link

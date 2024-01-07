@@ -7,6 +7,8 @@ import Cart from '../pages/cart';
 import LogIn from '../pages/logIn';
 import AboutUs from '../pages/about';
 import ContactUS from '../pages/contactus';
+import ResetPassword from '../pages/resetPassword';
+import ForgetPassword from '../pages/forgetPassword';
 
 class Router extends Component {
   render() {
@@ -19,6 +21,8 @@ class Router extends Component {
         <Route path="/login" element={<LogIn />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUS />} />
+        <Route path="/forgetPassword" element={<ForgetPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </BRRoutes>
     );
   }
